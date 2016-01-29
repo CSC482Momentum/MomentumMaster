@@ -1,29 +1,59 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Clickable : MonoBehaviour {
 
-    public RaycastHit hit;
-    public Ray ray;
-    private Vector3 touchpos;
 
-    public float radius = 5.0f;
-    public float power = 10.0f;
-
-    void Update ()
-    {
-        if(Input.GetMouseButtonDown(0))
+   public float pushforce;
+    public float pullforce;
+    public float pullplayer;
+    public RigidbodyFirstPersonController fpsc;
+ 
+    // Update is called once per frame
+    void Update()  {
+        if (Input.GetButtonDown("Fire1"))
         {
-//            if (Physics.Raycast(ray, out hit, 1000))
-//            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                touchpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit hit;
+            Vector3 fwd = transform.TransformDirection(Vector3.forward);
+            fwd = fwd.normalized;
+            if (Physics.Raycast(transform.position, fwd, out hit, 10))
+            {
 
-                Vector3 dir = gameObject.transform.position - touchpos;
-                hit.transform.SendMessage("Touched", dir);
-//            }
+                if (hit.rigidbody != null)
+                {
+                    print("hit!");
+                    hit.rigidbody.AddForce(fwd * pushforce);
+                }
+            }
+        }
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+            RaycastHit hit;
+            Vector3 fwd = transform.TransformDirection(Vector3.forward);
+            fwd = fwd.normalized;
+            if (Physics.Raycast(transform.position, fwd, out hit, 20))
+            {
+                if (hit.collider.tag == "Hook")
+                {
+                    print("hit3!");
+                    fpsc.m_Jump = true;
+                    this.transform.parent.GetComponent<Rigidbody>().AddForce((hit.transform.position - transform.position).normalized * pullplayer);
+
+                }
+                else
+                {
+                    if (hit.rigidbody != null)
+                    {
+                        print("hit2!");
+                        hit.rigidbody.AddForce((-fwd) * pullforce);
+                    }
+                }
+            }
         }
     }
+
 	
 }
 

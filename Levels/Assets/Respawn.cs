@@ -12,11 +12,13 @@ public class Respawn : MonoBehaviour
     {
         if (col.tag == "Player")
         {
+
+            Instantiate(prefabPe, col.transform.position, Rotation);
             col.transform.position = Spawn;
 //          col.transform.localEulerAngles = Rotation;
-            Instantiate(prefabPe, col.transform.position, Rotation);
 
-            Destroy(prefabPe, 2);
+
+ //           Destroy(prefabPe, 2);
 
  //           col.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY;
  //           new WaitForSeconds(1);

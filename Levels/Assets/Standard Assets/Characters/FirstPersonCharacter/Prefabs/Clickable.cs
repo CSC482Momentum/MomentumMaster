@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Clickable : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class Clickable : MonoBehaviour {
  
     // Update is called once per frame
     void Update()  {
-        if (Input.GetButtonDown("Fire1"))
+        if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
             RaycastHit hit;
             Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -28,7 +29,7 @@ public class Clickable : MonoBehaviour {
             }
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (CrossPlatformInputManager.GetButtonDown("Fire2"))
         {
             RaycastHit hit;
             Vector3 fwd = transform.TransformDirection(Vector3.forward);

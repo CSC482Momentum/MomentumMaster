@@ -68,6 +68,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Alex Melton\Scripts\Charge_Slider_Ghost_Script.cs" />
+    <Compile Include="Assets\Alex Melton\Scripts\Charge_Slider_Script.cs" />
+    <Compile Include="Assets\Alex Melton\Scripts\Cooldown_Clock.cs" />
+    <Compile Include="Assets\Alex Melton\Scripts\Direction_Slider_Script.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
@@ -108,9 +112,12 @@
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\MoveForward.cs" />
+    <Compile Include="Assets\PullScript.cs" />
+    <Compile Include="Assets\PushScript.cs" />
     <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\TorusGenerator.cs" />
     <Compile Include="Assets\WalkerController.cs" />
+    <Compile Include="Assets\Weapons.cs" />
     <Compile Include="Assets\bounce.cs" />
   </ItemGroup>
   <ItemGroup>

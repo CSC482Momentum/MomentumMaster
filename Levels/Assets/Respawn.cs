@@ -17,6 +17,8 @@ public class Respawn : MonoBehaviour
             col.transform.position = Spawn;
 //          col.transform.localEulerAngles = Rotation;
 
+			col.attachedRigidbody.velocity = Vector3.zero;
+			col.attachedRigidbody.rotation = Quaternion.Euler(0, 0, 0);
 
  //           Destroy(prefabPe, 2);
 

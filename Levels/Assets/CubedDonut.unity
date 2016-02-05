@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushforce: 1600
-  pushplayer: 0
+  pushplayer: 1000
   fpsc: {fileID: 1485849592}
 --- !u!114 &425778639
 MonoBehaviour:

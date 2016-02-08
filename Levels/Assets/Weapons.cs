@@ -15,15 +15,34 @@ public class Weapons : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    for (int i=1; i <= nrWeapons; i++)
+//	    for (int i=1; i <= nrWeapons; i++)
+//        {
+//            if (Input.GetKeyDown("" + i))
+//            {
+//                currentweapon = i - 1;
+//                SwitchWeapon(currentweapon);
+//            }
+            
+//        }
+        if(Input.GetButtonDown("Weapon1"))
         {
-            if (Input.GetKeyDown("" + i))
+            currentweapon = 0;
+            SwitchWeapon(currentweapon);
+        } else if (Input.GetButtonDown("Weapon2"))
+        {
+            currentweapon = 1;
+            SwitchWeapon(currentweapon);
+        } else if (Input.GetButtonDown("Switch"))
+        {
+            currentweapon++;
+            if (currentweapon >= nrWeapons)
             {
-                currentweapon = i - 1;
-                SwitchWeapon(currentweapon);
+                currentweapon = 0;
             }
+            SwitchWeapon(currentweapon);
+
         }
-	}
+    }
 
     void SwitchWeapon(int index)
     {

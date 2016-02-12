@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PushScript : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PushScript : MonoBehaviour
         //        timeStamp = Time.time + cooldown;
         if (timeStamp <= Time.time)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
             {
                 RaycastHit hit;
                 Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
@@ -34,7 +35,7 @@ public class PushScript : MonoBehaviour
                     }
                 }
             }
-            if (Input.GetButtonDown("Fire2"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
                 RaycastHit hit;
                 Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);

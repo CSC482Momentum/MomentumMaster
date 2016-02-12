@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Weapons : MonoBehaviour {
 
@@ -24,15 +25,15 @@ public class Weapons : MonoBehaviour {
 //            }
             
 //        }
-        if(Input.GetButtonDown("Weapon1"))
+        if(CrossPlatformInputManager.GetButtonDown("Weapon1"))
         {
             currentweapon = 0;
             SwitchWeapon(currentweapon);
-        } else if (Input.GetButtonDown("Weapon2"))
+        } else if (CrossPlatformInputManager.GetButtonDown("Weapon2"))
         {
             currentweapon = 1;
             SwitchWeapon(currentweapon);
-        } else if (Input.GetButtonDown("Switch"))
+        } else if (CrossPlatformInputManager.GetButtonDown("Switch"))
         {
             currentweapon++;
             if (currentweapon >= nrWeapons)

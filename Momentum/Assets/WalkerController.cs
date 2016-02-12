@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 /* -------------------------------------------------------------------------------
 	GravityFPSWalker
@@ -16,7 +17,7 @@
  
 	The LookTransform should be a child GameObject which points in the direction
 	that the player is looking at. This could for example be a child GameObject 
-	with a camera. The LookTransform is used to determine the movement veectors.
+	with a camera. The LookTransform is used to determine the movement vectors.
  ------------------------------------------------------------------------------ */
 [RequireComponent(typeof(Rigidbody))]
 public class GravityFPSWalker : MonoBehaviour
@@ -40,7 +41,7 @@ public class GravityFPSWalker : MonoBehaviour
 
     void Update()
     {
-        jump = jump || Input.GetButtonDown("Jump");
+        jump = jump || CrossPlatformInputManager.GetButtonDown("Jump");
     }
 
     void FixedUpdate()
@@ -56,7 +57,7 @@ public class GravityFPSWalker : MonoBehaviour
         // Add velocity change for movement on the local horizontal plane
         Vector3 forward = Vector3.Cross(transform.up, -LookTransform.right).normalized;
         Vector3 right = Vector3.Cross(transform.up, LookTransform.forward).normalized;
-        Vector3 targetVelocity = (forward * Input.GetAxis("Vertical") + right * Input.GetAxis("Horizontal")) * Velocity;
+        Vector3 targetVelocity = (forward * CrossPlatformInputManager.GetAxis("Vertical") + right * Input.GetAxis("Horizontal")) * Velocity;
         Vector3 localVelocity = transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity);
         Vector3 velocityChange = transform.InverseTransformDirection(targetVelocity) - localVelocity;
 

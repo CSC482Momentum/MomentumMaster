@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+<<<<<<< HEAD:Levels/Assets/PullScript.cs
 using Assets;
 using System;
+=======
+using UnityStandardAssets.CrossPlatformInput;
+>>>>>>> 7b401f5880b344bc1e41f180b112a63a636b6822:Momentum/Assets/PullScript.cs
 
 public class PullScript : Weapon
 {
@@ -23,7 +27,7 @@ public class PullScript : Weapon
     {
         if (timeStamp <= Time.time)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
             {
                 RaycastHit hit;
                 //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -40,7 +44,7 @@ public class PullScript : Weapon
                 }
             }
 
-            if (Input.GetButtonDown("Fire2"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
                 RaycastHit hit;
                 //        Vector3 fwd = transform.TransformDirection(Vector3.forward);

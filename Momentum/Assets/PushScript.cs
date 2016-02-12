@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+<<<<<<< HEAD:Levels/Assets/PushScript.cs
 using Assets;
 using System;
+=======
+using UnityStandardAssets.CrossPlatformInput;
+>>>>>>> 7b401f5880b344bc1e41f180b112a63a636b6822:Momentum/Assets/PushScript.cs
 
 public class PushScript : Weapon
 {
@@ -24,7 +28,7 @@ public class PushScript : Weapon
         //        timeStamp = Time.time + cooldown;
         if (timeStamp <= Time.time)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire1"))
             {
                 RaycastHit hit;
                 Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
@@ -39,7 +43,7 @@ public class PushScript : Weapon
                     }
                 }
             }
-            if (Input.GetButtonDown("Fire2"))
+            if (CrossPlatformInputManager.GetButtonDown("Fire2"))
             {
                 RaycastHit hit;
                 Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);

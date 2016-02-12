@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using Assets;
+using System;
 
-public class PushScript : MonoBehaviour
+public class PushScript : Weapon
 {
     public float pushforce;
     public float pushplayergrounded;
-    public float range;
     public Vector3 yvectaerial;
     public float pushplayeraerial;
-    public float cooldown;
     private float timeStamp;
+    public float charge;
+    public float range;
+    public float cooldown;
+
+
     public RigidbodyFirstPersonController fpsc;
 
     // Update is called once per frame
@@ -59,14 +64,6 @@ public class PushScript : MonoBehaviour
 
                 }
 
-
-
-
-
-
-
-
-
                 //                }
                 //            }
 
@@ -87,6 +84,16 @@ public class PushScript : MonoBehaviour
                 //v = Quaternion.AngleAxis(180, Vector3.up) * v;
             }
         }
+    }
+
+    public override float getRange()
+    {
+        return range;
+    }
+
+    public override float getCooldown()
+    {
+        return cooldown;
     }
 }
 

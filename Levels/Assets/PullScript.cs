@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using Assets;
+using System;
 
-public class PullScript : MonoBehaviour
+public class PullScript : Weapon
 {
 
     public float pullforce;
@@ -12,6 +14,7 @@ public class PullScript : MonoBehaviour
     public Vector3 yvectaerial;
     public float range;
     public float cooldown;
+
     private float timeStamp;
     public RigidbodyFirstPersonController fpsc;
 
@@ -61,10 +64,19 @@ public class PullScript : MonoBehaviour
                         }
                         timeStamp = Time.time + cooldown;
                     }
-
                 }
             }
         }
+    }
+
+    public override float getRange()
+    {
+        return range;
+    }
+
+    public override float getCooldown()
+    {
+        return cooldown;
     }
 }
 

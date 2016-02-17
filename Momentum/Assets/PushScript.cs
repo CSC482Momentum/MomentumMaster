@@ -36,6 +36,7 @@ public class PushScript : Weapon
                     {
                         print("hit!");
                         hit.rigidbody.AddForce(fwd * pushforce);
+
                         timeStamp = Time.time + cooldown;
                     }
                 }

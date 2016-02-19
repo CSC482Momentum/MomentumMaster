@@ -17,6 +17,7 @@ public class PushScript : Weapon
     public float cooldown;
 	private bool rightTriggerUsed = false;
 	private bool leftTriggerUsed = false;
+	public WorldController worldController;
 
     public RigidbodyFirstPersonController fpsc;
 
@@ -40,6 +41,7 @@ public class PushScript : Weapon
 							hit.rigidbody.AddForce(fwd * pushforce);
 
 							timeStamp = Time.time + cooldown;
+							worldController.audioManager.playSound ("push");
 						}
 					}
 					rightTriggerUsed = true;

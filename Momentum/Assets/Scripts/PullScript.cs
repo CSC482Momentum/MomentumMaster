@@ -20,6 +20,7 @@ public class PullScript : Weapon
 	private bool rightTriggerUsed = false;
 	private bool leftTriggerUsed = false;
     public RigidbodyFirstPersonController fpsc;
+	public WorldController worldController;
 
     // Update is called once per frame
     void Update()
@@ -40,6 +41,7 @@ public class PullScript : Weapon
 							print("hit2!");
 							hit.rigidbody.AddForce((-fwd) * pullforce);
 							timeStamp = Time.time + cooldown;
+							worldController.audioManager.playSound ("pull");
 						}
 					}
 					rightTriggerUsed = true;

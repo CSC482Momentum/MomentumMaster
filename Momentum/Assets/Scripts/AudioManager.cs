@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour {
 
-	public AudioSource[] hitSounds = new AudioSource[3];
+
+
+	public List<AudioSource> hitSounds = new List<AudioSource>();
 	private int hitSoundMarker = 0;
 
-	public AudioSource[] pullSounds = new AudioSource[4];
+	public List<AudioSource> pullSounds = new List<AudioSource>();
 	private int pullSoundMarker = 0;
 
-	public AudioSource[] punchSounds = new AudioSource[5];
+	public List<AudioSource> punchSounds = new List<AudioSource>();
 	private int punchSoundMarker = 0;
 
-	public AudioSource[] walkSounds = new AudioSource[2];
+	public List<AudioSource> walkSounds = new List<AudioSource>();
 	private int walkSoundMarker = 0;
 
 	public void playSound(string hitType) {

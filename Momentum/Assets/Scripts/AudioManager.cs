@@ -24,14 +24,14 @@ public class AudioManager : MonoBehaviour {
 		case "hit":
 			hitSounds [hitSoundMarker].Play ();
 			hitSoundMarker++;
-			if(hitSoundMarker == hitSounds.Length) {
+			if(hitSoundMarker == hitSounds.Count) {
 				hitSoundMarker = 0;
 			}
 			break;
 		case "pull":
 			pullSounds [pullSoundMarker].Play ();
 			pullSoundMarker++;
-			if(pullSoundMarker == pullSounds.Length) {
+			if(pullSoundMarker == pullSounds.Count) {
 				pullSoundMarker = 0;
 			}
 			break;
@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour {
 		case "walk":
 			walkSounds [walkSoundMarker].Play ();
 			walkSoundMarker++;
-			if(walkSoundMarker == walkSounds.Length) {
+			if(walkSoundMarker == walkSounds.Count) {
 				walkSoundMarker = 0;
 			}
 			break;

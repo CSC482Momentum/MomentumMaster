@@ -9,6 +9,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     {
         public float XSensitivity = 2f;
         public float YSensitivity = 2f;
+		public float XJoySen = 2f;
+        public float YJoySen = 2f;
         public bool clampVerticalRotation = true;
         public float MinimumX = -90F;
         public float MaximumX = 90F;
@@ -33,8 +35,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		    //Allow for support of both Joystick and Mouse support
             float yRot = CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
             float xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
-            float yJoyRot = CrossPlatformInputManager.GetAxis("Joystick X");
-            float xJoyRot = CrossPlatformInputManager.GetAxis("Joystick Y");
+            float yJoyRot = CrossPlatformInputManager.GetAxis("Joystick X") * XJoySen;
+            float xJoyRot = CrossPlatformInputManager.GetAxis("Joystick Y") * YJoySen;
 
             m_CharacterTargetRot *= Quaternion.Euler (0f, yRot, 0f);
             m_CameraTargetRot *= Quaternion.Euler (-xRot, 0f, 0f);

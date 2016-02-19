@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C97484BE-0233-2A9A-A9BE-968E7392511B}</ProjectGuid>
+    <ProjectGuid>{16EDFE6F-7AAA-B52D-FB94-630230AA9497}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -122,6 +122,7 @@
      <Compile Include="Assets\Respawn.cs" />
      <Compile Include="Assets\TorusGenerator.cs" />
      <Compile Include="Assets\WalkerController.cs" />
+     <Compile Include="Assets\Weapon.cs" />
      <Compile Include="Assets\Weapons.cs" />
      <Compile Include="Assets\bounce.cs" />
      <None Include="Assets\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -224,7 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F2BC2F77-5C90-D7F0-57C1-8948F02FB71E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{56AECC56-5751-E9C4-D434-B2E8DF650EDB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

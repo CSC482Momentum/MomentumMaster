@@ -94,7 +94,7 @@ public class OVRPlayerController : MonoBehaviour
 	private bool prevHatRight = false;
 	private float SimulationRate = 60f;
 
-	void Start()
+    void Start()
 	{
 		// Add eye-depth as a camera offset from the player controller
 		var p = CameraRig.transform.localPosition;
@@ -295,8 +295,13 @@ public class OVRPlayerController : MonoBehaviour
 		float rotateInfluence = SimulationRate * Time.deltaTime * RotationAmount * RotationScaleMultiplier;
 
 #if !UNITY_ANDROID || UNITY_EDITOR
-		if (!SkipMouseRotation)
-			euler.y += Input.GetAxis("Mouse X") * rotateInfluence * 3.25f;
+        if (!SkipMouseRotation)
+        {
+            euler.y += Input.GetAxis("Mouse X") * rotateInfluence * 3.25f;
+            euler.x += Input.GetAxis("Mouse Y") * rotateInfluence * 3.25f;
+        }
+            
+        
 #endif
 
 		moveInfluence = SimulationRate * Time.deltaTime * Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;
@@ -322,6 +327,7 @@ public class OVRPlayerController : MonoBehaviour
 		Vector2 secondaryAxis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
 
 		euler.y += secondaryAxis.x * rotateInfluence;
+        euler.x += secondaryAxis.y * rotateInfluence;
 
 		transform.rotation = Quaternion.Euler(euler);
 	}

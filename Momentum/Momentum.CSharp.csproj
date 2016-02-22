@@ -57,12 +57,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -149,6 +143,7 @@
     <Compile Include="Assets\PullScript.cs" />
     <Compile Include="Assets\PushScript.cs" />
     <Compile Include="Assets\Respawn.cs" />
+    <Compile Include="Assets\TargetCamera.cs" />
     <Compile Include="Assets\TorusGenerator.cs" />
     <Compile Include="Assets\WalkerController.cs" />
     <Compile Include="Assets\Weapon.cs" />

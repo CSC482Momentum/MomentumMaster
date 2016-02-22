@@ -55,13 +55,13 @@ public class PullScript : Weapon
                         if (fpsc.Grounded)
                         {
                             fpsc.m_Jump = true;
-                            this.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded);
+                            this.transform.parent.transform.parent.transform.parent.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded);
 
                         }
                         else
                         {
                             fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                            this.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial);
+                            this.transform.parent.transform.parent.transform.parent.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial);
                         }
                         timeStamp = Time.time + cooldown;
                     }

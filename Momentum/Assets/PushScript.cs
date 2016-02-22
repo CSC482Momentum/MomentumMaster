@@ -49,7 +49,7 @@ public class PushScript : Weapon
                 {
                     Vector3 v = Vector3.up;
                     fpsc.m_Jump = true;
-                    this.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((v).normalized * pushplayergrounded);
+                    this.transform.parent.transform.parent.transform.parent.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((v).normalized * pushplayergrounded);
                 }
                 else
                 {
@@ -59,7 +59,7 @@ public class PushScript : Weapon
                         if (hit.collider.tag == "Hook")
                         {
                             fwd = fwd.normalized;
-                            this.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial);
+                            this.transform.parent.transform.parent.transform.parent.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial);
                             timeStamp = Time.time + cooldown;
                         }
                     }

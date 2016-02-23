@@ -117,7 +117,6 @@
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
-    <Compile Include="Assets\MoveForward.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRPlatformMenu.cs" />
@@ -146,14 +145,17 @@
     <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
     <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
-    <Compile Include="Assets\PullScript.cs" />
-    <Compile Include="Assets\PushScript.cs" />
-    <Compile Include="Assets\Respawn.cs" />
-    <Compile Include="Assets\TorusGenerator.cs" />
-    <Compile Include="Assets\WalkerController.cs" />
-    <Compile Include="Assets\Weapon.cs" />
-    <Compile Include="Assets\Weapons.cs" />
-    <Compile Include="Assets\bounce.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\MoveForward.cs" />
+    <Compile Include="Assets\Scripts\PullScript.cs" />
+    <Compile Include="Assets\Scripts\PushScript.cs" />
+    <Compile Include="Assets\Scripts\Respawn.cs" />
+    <Compile Include="Assets\Scripts\TorusGenerator.cs" />
+    <Compile Include="Assets\Scripts\WalkerController.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Weapons.cs" />
+    <Compile Include="Assets\Scripts\WorldController.cs" />
+    <Compile Include="Assets\Scripts\bounce.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CartoonBusinessZombie\ReadMe.txt" />

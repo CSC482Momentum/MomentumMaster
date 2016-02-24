@@ -339,8 +339,20 @@ public class OVRPlayerController : MonoBehaviour
 			Vector3 prevPos = root.position;
 			Quaternion prevRot = root.rotation;
 
-            print("" + centerEye.rotation.eulerAngles.y);
-            this.transform.parent.transform.Rotate(new Vector3(0, centerEye.rotation.eulerAngles.y, 0));
+            
+            float headRot = centerEye.rotation.eulerAngles.y;
+
+            if (centerEye.rotation.eulerAngles.y > 180)
+            {
+                headRot -= 360;
+            }
+
+            print("" + headRot);
+
+            if(headRot > 20 || headRot < -20)
+            {
+                transform.parent.transform.Rotate(0, headRot/4, 0);
+            }
 
             root.position = prevPos;
 			root.rotation = prevRot;

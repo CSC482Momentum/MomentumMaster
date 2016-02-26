@@ -9,7 +9,7 @@ public class PushScript : Weapon
 {
 	public float pushforce = 1600f;
 	public float pushplayergrounded = 2100f;
-	public Vector3 yvectaerial = new Vector3 (0, .25, 0);
+	public Vector3 yvectaerial = new Vector3 (0, (float) .25, 0);
 	public float pushplayeraerial = 4000f;
 	private float timeStamp;
 	public float charge = 0f;

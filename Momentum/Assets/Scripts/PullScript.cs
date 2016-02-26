@@ -11,8 +11,8 @@ public class PullScript : Weapon
 	public float pullforce = 400f;
 	public float pullplayergrounded = 2000f;
 	public float pullplayeraerial = 5000f;
-	public Vector3 yvectgrounded = new Vector3 (0, .2, 0);
-	public Vector3 yvectaerial = new Vector3 (0, .8, 0);
+	public Vector3 yvectgrounded = new Vector3 (0, (float) .2, 0);
+	public Vector3 yvectaerial = new Vector3 (0, (float) .8, 0);
 	public float range= 15f;
 	public float cooldown = 1f;
 

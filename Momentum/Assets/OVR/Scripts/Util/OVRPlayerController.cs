@@ -352,7 +352,9 @@ public class OVRPlayerController : MonoBehaviour
             if(headRot > 20 || headRot < -20)
             {
                 transform.parent.transform.Rotate(0, headRot/4, 0);
+ //               transform.Rotate(0, headRot / 4, 0);
             }
+            
 
             root.position = prevPos;
 			root.rotation = prevRot;

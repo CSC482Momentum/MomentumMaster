@@ -813,7 +813,7 @@ GameObject:
   - 137: {fileID: 13709592}
   - 114: {fileID: 11400132}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2813,22 +2813,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 192
-    i1: 71
-    i2: 170
-    i3: 173
-    i4: 15
-    i5: 209
-    i6: 120
-    i7: 212
-    i8: 251
-    i9: 49
-    i10: 128
-    i11: 136
-    i12: 135
-    i13: 239
-    i14: 85
-    i15: 230
+    i0: 80
+    i1: 96
+    i2: 172
+    i3: 52
+    i4: 83
+    i5: 243
+    i6: 14
+    i7: 116
+    i8: 105
+    i9: 85
+    i10: 238
+    i11: 204
+    i12: 188
+    i13: 2
+    i14: 96
+    i15: 217
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
 --- !u!114 &11410890
@@ -3825,6 +3825,8 @@ MonoBehaviour:
   mouseLook:
     XSensitivity: 2
     YSensitivity: 2
+    XJoySen: 2
+    YJoySen: 2
     clampVerticalRotation: 1
     MinimumX: -45
     MaximumX: 90

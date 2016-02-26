@@ -537,12 +537,6 @@ Transform:
   - {fileID: 1005462698}
   m_Father: {fileID: 1573409340}
   m_RootOrder: 6
---- !u!114 &263769605 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418802, guid: c047aaad0fd178d4fb31808887ef55e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 863388839}
-  m_Script: {fileID: 11500000, guid: ca60563be8721e84f8b908319eeb5517, type: 3}
 --- !u!1 &268048777
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &345643645
 Light:
   m_ObjectHideFlags: 0
@@ -850,7 +844,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &347493086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &686615293
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2151,7 +2145,7 @@ Prefab:
     - target: {fileID: 11484232, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: weap
       value: 
-      objectReference: {fileID: 263769605}
+      objectReference: {fileID: 0}
     - target: {fileID: 11418802, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_Enabled
       value: 1
@@ -2176,6 +2170,34 @@ Prefab:
       propertyPath: worldController
       value: 
       objectReference: {fileID: 274088101}
+    - target: {fileID: 22447408, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457996, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472292, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22497784, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22497312, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22431546, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 149606, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_IsPrefabParent: 0
@@ -3773,7 +3795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1573409337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3901,9 +3923,108 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 188204, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1656961251 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 188204, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
+  m_PrefabInternal: {fileID: 1656961250}
+--- !u!114 &1656961252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656961251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77a96c14b53d6ae4c8f34c4caf8916bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textFields:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  englishText:
+  - TUTORIAL LEVEL
+  - HOST GAME
+  - JOIN GAME
+  - OPTIONS
+  - QUIT
+  - RESUME
+  - OPTIONS
+  - LEAVE GAME
+  - QUIT GAME
+  spanishText:
+  - 'NIVEL DE TUTORIAL '
+  - 'JUEGO DE ACOGIDA '
+  - 'UNETE AL JUEGO '
+  - 'OPCIONES '
+  - 'DEJAR '
+  - "CURR\xCDCULUM "
+  - 'OPCIONES '
+  - "MEN\xDA PRINCIPAL "
+  - 'SALIR DEL PROGRAMA '
+  frenchText:
+  - 'NIVEAU TUTORIAL '
+  - "H\xD4TE JEU "
+  - 'REJOINS UNE PARTIE '
+  - "PARAM\xC8TRES "
+  - 'QUITTER '
+  - 'REPRENDRE '
+  - "PARAM\xC8TRES "
+  - "CONG\xC9 JEU "
+  - 'QUITTER PROGRAMME '
+  germanText:
+  - 'LERNPROGRAMM STUFE '
+  - 'GASTSPIEL '
+  - 'SPIEL BEITRETEN '
+  - 'OPTIONEN '
+  - 'VERLASSEN '
+  - 'FORTSETZEN '
+  - 'OPTIONEN '
+  - "HAUPTMEN\xDC "
+  - 'PROGRAMM BEENDEN '
+  italianText:
+  - 'LIVELLO TUTORIAL '
+  - 'OSPITARE GIOCO '
+  - 'UNISCITI AL GIOCO '
+  - 'OPZIONI '
+  - 'SMETTERE '
+  - 'CURRICULUM VITAE '
+  - 'OPZIONI '
+  - 'ABBANDONA LA PARTITA '
+  - 'CHIUDERE IL PROGRAMMA '
+  japaneseText:
+  - "\u30C1\u30E5\u30FC\u30C8\u30EA\u30A2\u30EB\u30EC\u30D9\u30EB "
+  - "\u30B2\u30FC\u30E0\u3092\u30DB\u30B9\u30C8 "
+  - "\u30B2\u30FC\u30E0\u306B\u53C2\u52A0\u3057\u307E\u3059 "
+  - "\u30AA\u30D7\u30B7\u30E7\u30F3 "
+  - "\u7D42\u4E86\u3059\u308B "
+  - "\u5C65\u6B74\u66F8 "
+  - "\u30AA\u30D7\u30B7\u30E7\u30F3 "
+  - "\u30E1\u30A4\u30F3\u30E1\u30CB\u30E5\u30FC "
+  - "\u30D7\u30ED\u30B0\u30E9\u30E0\u3092\u7D42\u4E86 "
+  russianText:
+  - "\u0423\u0447\u0435\u0431\u043D\u0438\u043A \u0423\u0420\u041E\u0412\u0415\u041D\u042C "
+  - "\u0445\u043E\u0437\u044F\u0438\u043D "
+  - "\u041F\u0420\u0418\u0421\u041E\u0415\u0414\u0418\u041D\u0418\u0422\u042C\u0421\u042F "
+  - "\u041E\u041F\u0426\u0418\u0418 "
+  - "\u0423\u0412\u041E\u041B\u0418\u0422\u042C\u0421\u042F "
+  - "\u041F\u0420\u041E\u0414\u041E\u041B\u0416\u0418\u0422\u042C "
+  - "\u041E\u041F\u0426\u0418\u0418 "
+  - "\u0413\u041B\u0410\u0412\u041D\u041E\u0415 \u041C\u0415\u041D\u042E "
+  - "\u0412\u042B\u0419\u0422\u0418 \u041F\u0420\u041E\u0413\u0420\u0410\u041C\u041C\u042B "
 --- !u!1 &1659911056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,7 +4118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1684166178
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4311,7 +4432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1877073757
 Transform:
   m_ObjectHideFlags: 0
@@ -4343,7 +4464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1910644816
 Transform:
   m_ObjectHideFlags: 0
@@ -4449,7 +4570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2103934904
 Transform:
   m_ObjectHideFlags: 0

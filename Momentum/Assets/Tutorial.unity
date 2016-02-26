@@ -2995,7 +2995,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 481178, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 481178, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_LocalRotation.z
@@ -3003,11 +3003,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 481178, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.00000016292068
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 481178, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431114, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: HmdResetsY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431114, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: HmdRotatesY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431114, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: useProfileData
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410890, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14335574, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}

@@ -25,6 +25,7 @@ public class PullScript : Weapon
     // Update is called once per frame
     void Update()
     {
+        print("We're updating");
         if (timeStamp <= Time.time)
         {
             if (CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)

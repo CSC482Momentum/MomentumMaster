@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: 3a29c60a05dc4454e896340da579faf3
+timeCreated: 1456352786
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: pull_proto2:pCylinder11
+    100002: pull_proto2:pCylinder12
+    100004: pull_proto2:pCylinder14
+    100006: pull_proto2:pCylinder15
+    100008: pull_proto2:pCylinder16
+    100010: pull_proto2:pCylinder17
+    100012: pull_proto2:pCylinder18
+    100014: pull_proto2:pCylinder19
+    100016: pull_proto2:polySurface13
+    100018: pull_proto2:polySurface13 1
+    100020: pull_proto2:polySurface14
+    100022: pull_proto2:polySurface19
+    100024: pull_proto2:polySurface21
+    100026: pull_proto2:polySurface21 1
+    100028: pull_proto2:polySurface22
+    100030: pull_proto2:polySurface23
+    100032: pull_proto2:polySurface24
+    100034: pull_proto2:polySurface25
+    100036: pull_proto2:polySurface26
+    100038: pull_proto2:polySurface26 1
+    100040: pull_proto2:polySurface27
+    100042: pull_proto2:polySurface28
+    100044: pull_proto2:polySurface29
+    100046: pull_proto2:polySurface30
+    100048: pull_proto2:polySurface31
+    100050: pull_proto2:polySurface32
+    100052: pull_proto2:polySurface33
+    100054: pull_proto2:polySurface34
+    100056: pull_proto2:polySurface35
+    100058: pull_proto2:polySurface36
+    100060: pull_proto2:polySurface41
+    100062: pull_proto2:polySurface41 1
+    100064: pull_proto2:polySurface42
+    100066: pull_proto2:polySurface43
+    100068: pull_proto2:polySurface44
+    100070: pull_proto2:polySurface45
+    100072: pull_proto2:polySurface46
+    100074: pull_proto2:polySurface47
+    100076: pull_proto2:polySurface48
+    100078: pull_proto2:polySurface49
+    100080: pull_proto2:polySurface50
+    100082: pull_proto2:polySurface50 1
+    100084: pull_proto2:polySurface51
+    100086: pull_proto2:polySurface52
+    100088: pull_proto2:polySurface53
+    100090: pull_proto2:polySurface54
+    100092: pull_proto2:polySurface55
+    100094: pull_proto2:polySurface56
+    100096: pull_proto2:polySurface57
+    100098: pull_proto2:polySurface58
+    100100: pull_proto2:polySurface7
+    100102: pull_proto2:transform27
+    100104: pull_proto2:transform28
+    100106: pull_proto2:transform29
+    100108: pull_proto2:transform30
+    100110: pull_proto2:transform31
+    100112: pull_proto2:transform32
+    100114: pull_proto2:transform33
+    100116: pull_proto2:transform34
+    100118: pull_proto2:transform35
+    100120: pull_proto2:transform36
+    100122: pull_proto2:transform37
+    100124: pull_proto2:transform38
+    100126: pull_proto2:transform39
+    100128: pull_proto2:transform40
+    100130: pull_proto2:transform41
+    100132: pull_proto2:transform42
+    100134: pull_proto2:transform43
+    100136: pull_proto2:transform44
+    100138: pull_proto2:transform45
+    100140: pull_proto2:transform46
+    100142: pull_proto2:transform47
+    100144: pull_proto2:transform48
+    100146: pull_proto2:transform49
+    100148: pull_proto2:transform50
+    100150: pull_proto2:transform51
+    100152: pull_proto2:transform52
+    100154: pull_proto2:transform53
+    100156: pull_proto2:transform54
+    100158: pull_proto2:transform55
+    100160: pull_proto2:transform56
+    100162: pull_proto2:transform57
+    100164: pull_proto2:transform62
+    100166: pull_proto2:transform63
+    100168: pull_proto2:transform64
+    100170: pull_proto2:transform65
+    100172: pull_proto2:transform66
+    100174: pull_proto2:transform67
+    100176: pull_proto2:transform68
+    100178: pull_proto2:transform69
+    100180: pull_proto2:transform70
+    100182: pull_proto2:transform71
+    100184: pull_proto2:transform72
+    100186: pull_proto2:transform73
+    100188: pull_proto2:transform74
+    100190: pull_proto2:transform75
+    100192: pull_proto2:transform76
+    100194: pull_proto2:transform77
+    100196: pull_proto2:transform78
+    100198: pull_proto2:transform79
+    100200: pull_proto2:transform80
+    100202: pull_proto2:transform81
+    100204: pull_proto2:transform82
+    100206: pull_proto2:transform83
+    100208: pull_proto2:transform84
+    100210: pull_proto2:transform85
+    100212: pull_proto2:transform86
+    100214: pull_proto2:transform87
+    100216: pull_proto2:transform88
+    100218: pull_proto2:transform89
+    100220: pull_proto2:transform90
+    100222: pull_proto2:wep_pull_barrel
+    100224: pull_proto2:wep_pull_reel
+    100226: pull_proto2:wep_pull_reelarm
+    100228: pull_proto2:wep_pull_ring0
+    100230: pull_proto2:wep_pull_ring1
+    100232: pull_proto2:wep_pull_ring2
+    100234: pull_proto2:wep_pull_ring3
+    100236: pull_proto2:wep_pull_ring4
+    100238: pull_proto2:wep_pull_stock
+    100240: pull_proto2:wep_pull_stock 1
+    100242: //RootNode
+    400000: pull_proto2:pCylinder11
+    400002: pull_proto2:pCylinder12
+    400004: pull_proto2:pCylinder14
+    400006: pull_proto2:pCylinder15
+    400008: pull_proto2:pCylinder16
+    400010: pull_proto2:pCylinder17
+    400012: pull_proto2:pCylinder18
+    400014: pull_proto2:pCylinder19
+    400016: pull_proto2:polySurface13
+    400018: pull_proto2:polySurface13 1
+    400020: pull_proto2:polySurface14
+    400022: pull_proto2:polySurface19
+    400024: pull_proto2:polySurface21
+    400026: pull_proto2:polySurface21 1
+    400028: pull_proto2:polySurface22
+    400030: pull_proto2:polySurface23
+    400032: pull_proto2:polySurface24
+    400034: pull_proto2:polySurface25
+    400036: pull_proto2:polySurface26
+    400038: pull_proto2:polySurface26 1
+    400040: pull_proto2:polySurface27
+    400042: pull_proto2:polySurface28
+    400044: pull_proto2:polySurface29
+    400046: pull_proto2:polySurface30
+    400048: pull_proto2:polySurface31
+    400050: pull_proto2:polySurface32
+    400052: pull_proto2:polySurface33
+    400054: pull_proto2:polySurface34
+    400056: pull_proto2:polySurface35
+    400058: pull_proto2:polySurface36
+    400060: pull_proto2:polySurface41
+    400062: pull_proto2:polySurface41 1
+    400064: pull_proto2:polySurface42
+    400066: pull_proto2:polySurface43
+    400068: pull_proto2:polySurface44
+    400070: pull_proto2:polySurface45
+    400072: pull_proto2:polySurface46
+    400074: pull_proto2:polySurface47
+    400076: pull_proto2:polySurface48
+    400078: pull_proto2:polySurface49
+    400080: pull_proto2:polySurface50
+    400082: pull_proto2:polySurface50 1
+    400084: pull_proto2:polySurface51
+    400086: pull_proto2:polySurface52
+    400088: pull_proto2:polySurface53
+    400090: pull_proto2:polySurface54
+    400092: pull_proto2:polySurface55
+    400094: pull_proto2:polySurface56
+    400096: pull_proto2:polySurface57
+    400098: pull_proto2:polySurface58
+    400100: pull_proto2:polySurface7
+    400102: pull_proto2:transform27
+    400104: pull_proto2:transform28
+    400106: pull_proto2:transform29
+    400108: pull_proto2:transform30
+    400110: pull_proto2:transform31
+    400112: pull_proto2:transform32
+    400114: pull_proto2:transform33
+    400116: pull_proto2:transform34
+    400118: pull_proto2:transform35
+    400120: pull_proto2:transform36
+    400122: pull_proto2:transform37
+    400124: pull_proto2:transform38
+    400126: pull_proto2:transform39
+    400128: pull_proto2:transform40
+    400130: pull_proto2:transform41
+    400132: pull_proto2:transform42
+    400134: pull_proto2:transform43
+    400136: pull_proto2:transform44
+    400138: pull_proto2:transform45
+    400140: pull_proto2:transform46
+    400142: pull_proto2:transform47
+    400144: pull_proto2:transform48
+    400146: pull_proto2:transform49
+    400148: pull_proto2:transform50
+    400150: pull_proto2:transform51
+    400152: pull_proto2:transform52
+    400154: pull_proto2:transform53
+    400156: pull_proto2:transform54
+    400158: pull_proto2:transform55
+    400160: pull_proto2:transform56
+    400162: pull_proto2:transform57
+    400164: pull_proto2:transform62
+    400166: pull_proto2:transform63
+    400168: pull_proto2:transform64
+    400170: pull_proto2:transform65
+    400172: pull_proto2:transform66
+    400174: pull_proto2:transform67
+    400176: pull_proto2:transform68
+    400178: pull_proto2:transform69
+    400180: pull_proto2:transform70
+    400182: pull_proto2:transform71
+    400184: pull_proto2:transform72
+    400186: pull_proto2:transform73
+    400188: pull_proto2:transform74
+    400190: pull_proto2:transform75
+    400192: pull_proto2:transform76
+    400194: pull_proto2:transform77
+    400196: pull_proto2:transform78
+    400198: pull_proto2:transform79
+    400200: pull_proto2:transform80
+    400202: pull_proto2:transform81
+    400204: pull_proto2:transform82
+    400206: pull_proto2:transform83
+    400208: pull_proto2:transform84
+    400210: pull_proto2:transform85
+    400212: pull_proto2:transform86
+    400214: pull_proto2:transform87
+    400216: pull_proto2:transform88
+    400218: pull_proto2:transform89
+    400220: pull_proto2:transform90
+    400222: pull_proto2:wep_pull_barrel
+    400224: pull_proto2:wep_pull_reel
+    400226: pull_proto2:wep_pull_reelarm
+    400228: pull_proto2:wep_pull_ring0
+    400230: pull_proto2:wep_pull_ring1
+    400232: pull_proto2:wep_pull_ring2
+    400234: pull_proto2:wep_pull_ring3
+    400236: pull_proto2:wep_pull_ring4
+    400238: pull_proto2:wep_pull_stock
+    400240: pull_proto2:wep_pull_stock 1
+    400242: //RootNode
+    2300000: pull_proto2:wep_pull_stock
+    3300000: pull_proto2:wep_pull_stock
+    4300000: pull_proto2:wep_pull_stock
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

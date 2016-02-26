@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 827678950046f254eac4696536669185
+timeCreated: 1456352801
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: wep_punch2:pCube10
+    100004: wep_punch2:pCube9
+    100006: wep_punch2:pHelix1
+    100008: wep_punch2:polySurface1
+    100010: wep_punch2:polySurface1 1
+    100012: wep_punch2:polySurface15
+    100014: wep_punch2:polySurface15 1
+    100016: wep_punch2:polySurface16
+    100018: wep_punch2:polySurface17
+    100020: wep_punch2:polySurface18
+    100022: wep_punch2:polySurface19
+    100024: wep_punch2:polySurface19 1
+    100026: wep_punch2:polySurface2
+    100028: wep_punch2:polySurface2 1
+    100030: wep_punch2:polySurface20
+    100032: wep_punch2:polySurface21
+    100034: wep_punch2:polySurface22
+    100036: wep_punch2:polySurface23
+    100038: wep_punch2:polySurface24
+    100040: wep_punch2:polySurface25
+    100042: wep_punch2:polySurface26
+    100044: wep_punch2:polySurface26 1
+    100046: wep_punch2:polySurface27
+    100048: wep_punch2:polySurface28
+    100050: wep_punch2:polySurface29
+    100052: wep_punch2:polySurface3
+    100054: wep_punch2:polySurface30
+    100056: wep_punch2:polySurface4
+    100058: wep_punch2:polySurface5
+    100060: wep_punch2:polySurface6
+    100062: wep_punch2:polySurface6 1
+    100064: wep_punch2:polySurface7
+    100066: wep_punch2:transform12
+    100068: wep_punch2:transform13
+    100070: wep_punch2:transform14
+    100072: wep_punch2:transform15
+    100074: wep_punch2:transform16
+    100076: wep_punch2:transform17
+    100078: wep_punch2:transform18
+    100080: wep_punch2:transform19
+    100082: wep_punch2:transform20
+    100084: wep_punch2:transform21
+    100086: wep_punch2:transform22
+    100088: wep_punch2:transform23
+    100090: wep_punch2:transform24
+    100092: wep_punch2:transform25
+    100094: wep_punch2:transform26
+    100096: wep_punch2:transform27
+    100098: wep_punch2:transform28
+    100100: wep_punch2:transform29
+    100102: wep_punch2:transform30
+    100104: wep_punch2:transform31
+    100106: wep_punch2:transform32
+    100108: wep_punch2:transform33
+    100110: wep_punch2:transform34
+    100112: wep_punch2:transform35
+    100114: wep_punch2:transform36
+    100116: wep_punch2:transform37
+    100118: wep_punch2:transform38
+    100120: wep_punch2:transform39
+    100122: wep_punch2:transform40
+    100124: wep_punch2:transform41
+    100126: wep_punch2:transform42
+    100128: wep_punch2:transform43
+    100130: wep_punch2:transform44
+    100132: wep_punch2:transform45
+    100134: wep_punch2:transform46
+    100136: wep_punch2:transform47
+    100138: wep_punch2:transform48
+    100140: wep_punch2:wep_punch_barrel
+    100142: wep_punch2:wep_punch_boltasm
+    100144: wep_punch2:wep_punch_bolthandle
+    100146: wep_punch2:wep_punch_boltknob
+    100148: wep_punch2:wep_punch_glove
+    100150: wep_punch2:wep_punch_spring
+    100152: wep_punch2:wep_punch_stock
+    100154: wep_punch2:wep_punch_stock 1
+    400000: //RootNode
+    400002: wep_punch2:pCube10
+    400004: wep_punch2:pCube9
+    400006: wep_punch2:pHelix1
+    400008: wep_punch2:polySurface1
+    400010: wep_punch2:polySurface1 1
+    400012: wep_punch2:polySurface15
+    400014: wep_punch2:polySurface15 1
+    400016: wep_punch2:polySurface16
+    400018: wep_punch2:polySurface17
+    400020: wep_punch2:polySurface18
+    400022: wep_punch2:polySurface19
+    400024: wep_punch2:polySurface19 1
+    400026: wep_punch2:polySurface2
+    400028: wep_punch2:polySurface2 1
+    400030: wep_punch2:polySurface20
+    400032: wep_punch2:polySurface21
+    400034: wep_punch2:polySurface22
+    400036: wep_punch2:polySurface23
+    400038: wep_punch2:polySurface24
+    400040: wep_punch2:polySurface25
+    400042: wep_punch2:polySurface26
+    400044: wep_punch2:polySurface26 1
+    400046: wep_punch2:polySurface27
+    400048: wep_punch2:polySurface28
+    400050: wep_punch2:polySurface29
+    400052: wep_punch2:polySurface3
+    400054: wep_punch2:polySurface30
+    400056: wep_punch2:polySurface4
+    400058: wep_punch2:polySurface5
+    400060: wep_punch2:polySurface6
+    400062: wep_punch2:polySurface6 1
+    400064: wep_punch2:polySurface7
+    400066: wep_punch2:transform12
+    400068: wep_punch2:transform13
+    400070: wep_punch2:transform14
+    400072: wep_punch2:transform15
+    400074: wep_punch2:transform16
+    400076: wep_punch2:transform17
+    400078: wep_punch2:transform18
+    400080: wep_punch2:transform19
+    400082: wep_punch2:transform20
+    400084: wep_punch2:transform21
+    400086: wep_punch2:transform22
+    400088: wep_punch2:transform23
+    400090: wep_punch2:transform24
+    400092: wep_punch2:transform25
+    400094: wep_punch2:transform26
+    400096: wep_punch2:transform27
+    400098: wep_punch2:transform28
+    400100: wep_punch2:transform29
+    400102: wep_punch2:transform30
+    400104: wep_punch2:transform31
+    400106: wep_punch2:transform32
+    400108: wep_punch2:transform33
+    400110: wep_punch2:transform34
+    400112: wep_punch2:transform35
+    400114: wep_punch2:transform36
+    400116: wep_punch2:transform37
+    400118: wep_punch2:transform38
+    400120: wep_punch2:transform39
+    400122: wep_punch2:transform40
+    400124: wep_punch2:transform41
+    400126: wep_punch2:transform42
+    400128: wep_punch2:transform43
+    400130: wep_punch2:transform44
+    400132: wep_punch2:transform45
+    400134: wep_punch2:transform46
+    400136: wep_punch2:transform47
+    400138: wep_punch2:transform48
+    400140: wep_punch2:wep_punch_barrel
+    400142: wep_punch2:wep_punch_boltasm
+    400144: wep_punch2:wep_punch_bolthandle
+    400146: wep_punch2:wep_punch_boltknob
+    400148: wep_punch2:wep_punch_glove
+    400150: wep_punch2:wep_punch_spring
+    400152: wep_punch2:wep_punch_stock
+    400154: wep_punch2:wep_punch_stock 1
+    2300000: wep_punch2:wep_punch_glove
+    2300002: wep_punch2:wep_punch_spring
+    2300004: wep_punch2:wep_punch_stock
+    3300000: wep_punch2:wep_punch_glove
+    3300002: wep_punch2:wep_punch_spring
+    3300004: wep_punch2:wep_punch_stock
+    4300000: wep_punch2:wep_punch_spring
+    4300002: wep_punch2:wep_punch_glove
+    4300004: wep_punch2:wep_punch_stock
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

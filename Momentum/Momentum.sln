@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momentum.CSharp.Plugins", "Momentum.CSharp.Plugins.csproj", "{3D94EC7C-1598-7722-62C1-DA733DA35B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momentum.CSharp", "Momentum.CSharp.csproj", "{945D6E9F-270F-8801-467D-171B5721BD9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momentum.CSharp.Editor", "Momentum.CSharp.Editor.csproj", "{79BE5FE0-D153-0D49-A91F-67A73DA6DA6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D94EC7C-1598-7722-62C1-DA733DA35B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D94EC7C-1598-7722-62C1-DA733DA35B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D94EC7C-1598-7722-62C1-DA733DA35B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D94EC7C-1598-7722-62C1-DA733DA35B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{945D6E9F-270F-8801-467D-171B5721BD9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945D6E9F-270F-8801-467D-171B5721BD9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945D6E9F-270F-8801-467D-171B5721BD9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945D6E9F-270F-8801-467D-171B5721BD9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79BE5FE0-D153-0D49-A91F-67A73DA6DA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79BE5FE0-D153-0D49-A91F-67A73DA6DA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79BE5FE0-D153-0D49-A91F-67A73DA6DA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79BE5FE0-D153-0D49-A91F-67A73DA6DA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

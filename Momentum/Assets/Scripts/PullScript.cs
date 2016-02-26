@@ -8,13 +8,13 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PullScript : Weapon
 {
 
-    public float pullforce;
-    public float pullplayergrounded;
-    public float pullplayeraerial;
-    public Vector3 yvectgrounded;
-    public Vector3 yvectaerial;
-    public float range;
-    public float cooldown;
+	public float pullforce = 400f;
+	public float pullplayergrounded = 2000f;
+	public float pullplayeraerial = 5000f;
+	public Vector3 yvectgrounded = new Vector3 (0, .2, 0);
+	public Vector3 yvectaerial = new Vector3 (0, .8, 0);
+	public float range= 15f;
+	public float cooldown = 1f;
 
     private float timeStamp;
     private bool rightTriggerUsed = false;

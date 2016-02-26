@@ -7,14 +7,14 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PushScript : Weapon
 {
-    public float pushforce;
-    public float pushplayergrounded;
-    public Vector3 yvectaerial;
-    public float pushplayeraerial;
-    private float timeStamp;
-    public float charge;
-    public float range;
-    public float cooldown;
+	public float pushforce = 1600f;
+	public float pushplayergrounded = 2100f;
+	public Vector3 yvectaerial = new Vector3 (0, .25, 0);
+	public float pushplayeraerial = 4000f;
+	private float timeStamp;
+	public float charge = 0f;
+	public float range = 10f;
+	public float cooldown = 1f;
     private bool rightTriggerUsed = false;
     private bool leftTriggerUsed = false;
     public WorldController worldController;

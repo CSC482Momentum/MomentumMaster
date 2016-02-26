@@ -537,12 +537,6 @@ Transform:
   - {fileID: 1005462698}
   m_Father: {fileID: 1573409340}
   m_RootOrder: 6
---- !u!114 &263769605 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11418802, guid: c047aaad0fd178d4fb31808887ef55e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 863388839}
-  m_Script: {fileID: 11500000, guid: ca60563be8721e84f8b908319eeb5517, type: 3}
 --- !u!1 &268048777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,7 +2145,7 @@ Prefab:
     - target: {fileID: 11484232, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: weap
       value: 
-      objectReference: {fileID: 263769605}
+      objectReference: {fileID: 0}
     - target: {fileID: 11418802, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_Enabled
       value: 1
@@ -2176,9 +2170,65 @@ Prefab:
       propertyPath: worldController
       value: 
       objectReference: {fileID: 274088101}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11456868, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+    - {fileID: 11418802, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &863388840 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11495742, guid: c047aaad0fd178d4fb31808887ef55e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 863388839}
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
+--- !u!1 &863388841 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 160922, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+  m_PrefabInternal: {fileID: 863388839}
+--- !u!1 &863388842 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 129600, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+  m_PrefabInternal: {fileID: 863388839}
+--- !u!114 &863388843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 863388841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0eb8f8c1266d14f9a25ca7b674c585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushforce: 1600
+  pushplayergrounded: 2100
+  yvectaerial: {x: 0, y: 0.25, z: 0}
+  pushplayeraerial: 4000
+  charge: 0
+  range: 10
+  cooldown: 1
+  worldController: {fileID: 274088101}
+  fpsc: {fileID: 863388840}
+--- !u!114 &863388844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 863388842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pullforce: 400
+  pullplayergrounded: 2000
+  pullplayeraerial: 5000
+  yvectgrounded: {x: 0, y: 0.2, z: 0}
+  yvectaerial: {x: 0, y: 0.8, z: 0}
+  range: 15
+  cooldown: 1
+  fpsc: {fileID: 863388840}
+  worldController: {fileID: 274088101}
 --- !u!1 &954960368
 GameObject:
   m_ObjectHideFlags: 0

@@ -2742,7 +2742,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!81 &8156520
 AudioListener:
   m_ObjectHideFlags: 1
@@ -3092,7 +3092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pullforce: 800
+  pullforce: 8000
   pullplayergrounded: 2000
   pullplayeraerial: 5000
   yvectgrounded: {x: 0, y: 0.2, z: 0}
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0eb8f8c1266d14f9a25ca7b674c585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushforce: 1600
+  pushforce: 8000
   pushplayergrounded: 2100
   yvectaerial: {x: 0, y: 0.25, z: 0}
   pushplayeraerial: 4000
@@ -3515,7 +3515,7 @@ MonoBehaviour:
   pullplayeraerial: 5000
   yvectgrounded: {x: 0, y: 0.2, z: 0}
   yvectaerial: {x: 0, y: 0.8, z: 0}
-  range: 15
+  range: 30
   cooldown: 1
   fpsc: {fileID: 11478428}
   worldController: {fileID: 0}
@@ -3880,8 +3880,8 @@ MonoBehaviour:
   sensitivityY: 3
   minimumX: -360
   maximumX: 360
-  minimumY: -60
-  maximumY: 60
+  minimumY: -90
+  maximumY: 90
 --- !u!114 &11481872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3904,8 +3904,8 @@ MonoBehaviour:
   m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
-    x: 0
-    y: 0
+    x: 1
+    y: 1
     width: 1
     height: 1
 --- !u!114 &11483166
@@ -3959,7 +3959,7 @@ MonoBehaviour:
   yvectaerial: {x: 0, y: 0.25, z: 0}
   pushplayeraerial: 4000
   charge: 0
-  range: 10
+  range: 30
   cooldown: 1
   worldController: {fileID: 0}
   fpsc: {fileID: 11478428}

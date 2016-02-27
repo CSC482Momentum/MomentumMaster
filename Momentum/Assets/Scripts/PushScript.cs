@@ -13,7 +13,7 @@ public class PushScript : Weapon
 	public float pushplayeraerial = 4000f;
 	private float timeStamp;
 	public float charge = 0f;
-	public float range = 10f;
+	public float range = 30f;
 	public float cooldown = 1f;
     private bool rightTriggerUsed = false;
     private bool leftTriggerUsed = false;

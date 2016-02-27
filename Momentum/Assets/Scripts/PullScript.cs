@@ -8,7 +8,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PullScript : Weapon
 {
 
-	public float pullforce = 400f;
+	public float pullforce = 40000f;
 	public float pullplayergrounded = 2000f;
 	public float pullplayeraerial = 5000f;
 	public Vector3 yvectgrounded = new Vector3 (0, (float) .2, 0);
@@ -59,7 +59,8 @@ public class PullScript : Weapon
             if (hit.rigidbody != null)
             {
                 print("hit2!");
-                hit.rigidbody.AddForce((-fwd) * pullforce);
+                //var distance = Vector3.Distance(hit.transform.position, transform.position);
+                hit.rigidbody.AddForce(((-fwd) * pullforce));
                 timeStamp = Time.time + cooldown;
                 worldController.audioManager.playSound("pull");
             }

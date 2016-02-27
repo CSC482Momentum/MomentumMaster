@@ -57,12 +57,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -151,13 +145,13 @@
     <Compile Include="Assets\Scripts\PullScript.cs" />
     <Compile Include="Assets\Scripts\PushScript.cs" />
     <Compile Include="Assets\Scripts\Respawn.cs" />
+    <Compile Include="Assets\Scripts\TargetCamera.cs" />
+    <Compile Include="Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Scripts\WalkerController.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\Weapons.cs" />
     <Compile Include="Assets\Scripts\WorldController.cs" />
     <Compile Include="Assets\Scripts\bounce.cs" />
-    <Compile Include="Assets\TargetCamera.cs" />
-    <Compile Include="Assets\TextManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CartoonBusinessZombie\ReadMe.txt" />

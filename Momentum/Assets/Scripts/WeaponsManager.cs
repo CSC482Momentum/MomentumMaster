@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Weapons : MonoBehaviour {
+public class WeaponsManager : MonoBehaviour {
 
     public int currentweapon = 0;
     public GameObject[] weapons;

@@ -2,7 +2,15 @@
 using System.Collections;
 
 public class WorldController : MonoBehaviour {
-
-	public AudioManager audioManager;
+    private static WorldController instance;
+    public AudioManager audioManager;
 	public AnimationManager animationManager;
+    public static WorldController getInstance()
+    {
+        if (instance == null)
+        {
+            instance = new WorldController();
+        }
+        return instance;
+    }
 }

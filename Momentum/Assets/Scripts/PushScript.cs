@@ -11,62 +11,35 @@ public class PushScript : Weapon
 	public float pushplayergrounded = 2100f;
 	public Vector3 yvectaerial = new Vector3 (0, (float) .25, 0);
 	public float pushplayeraerial = 4000f;
-	private float timeStamp;
 	public float charge = 0f;
-	public float range = 30f;
-	public float cooldown = 1f;
-    private bool rightTriggerUsed = false;
-    private bool leftTriggerUsed = false;
-    public WorldController worldController;
-
+	public float primaryRange = 30f;
+	public float primaryCooldown = 1f;
+    public float secondaryRange = 30f;
+    public float secondaryCooldown = 1f;
     public RigidbodyFirstPersonController fpsc;
 
     // Update is called once per frame
-    void Update()
-    {
-        //        timeStamp = Time.time + cooldown;
-        if (timeStamp <= Time.time)
-        {
-            if (CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
-            {
-                if (!rightTriggerUsed) {
-                    primaryFire();
-                }
-            }
-            if (Input.GetAxisRaw("Xbox Right Trigger") == 0) {
-                rightTriggerUsed = false;
-            }
-            if (CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
-            {
-                if (!leftTriggerUsed) {
-                    secondaryFire();
-                }
-            }
-            if (Input.GetAxisRaw("Xbox Left Trigger") == 0) {
-                leftTriggerUsed = false;
-            }
-        }
-    }
-    public void primaryFire()
+
+    public override void primaryFire()
     {
         RaycastHit hit;
         Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
         fwd = fwd.normalized;
-        if (Physics.Raycast(transform.position, fwd, out hit, range))
+        if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange()))
         {
             if (hit.rigidbody != null)
             {
                 print("hit!");
                 hit.rigidbody.AddForce(fwd * pushforce);
 
-                timeStamp = Time.time + cooldown;
+                primaryTimeStamp = Time.time + getPrimaryCooldown();
                 worldController.audioManager.playSound("push");
             }
         }
         rightTriggerUsed = true;
 
     }
-    public void secondaryFire()
+    public override void secondaryFire()
     {
         RaycastHit hit;
         Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
@@ -79,13 +52,13 @@ public class PushScript : Weapon
         else
         {
             fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            if (Physics.Raycast(transform.position, fwd, out hit, range))
+            if (Physics.Raycast(transform.position, fwd, out hit, getSecondaryRange()))
             {
                 if (hit.collider.tag == "Hook")
                 {
                     fwd = fwd.normalized;
                     transform.root.GetComponent<Rigidbody>().AddForce((-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial); // here, we're adding force to the player object.
-                    timeStamp = Time.time + cooldown;
+                    secondaryTimeStamp = Time.time + getSecondaryCooldown();
                 }
             }
 
@@ -113,14 +86,24 @@ public class PushScript : Weapon
 
     }
 
-    public override float getRange()
+    public override float getPrimaryRange()
     {
-        return range;
+        return primaryRange;
     }
 
-    public override float getCooldown()
+    public override float getSecondaryRange()
     {
-        return cooldown;
+        return secondaryRange;
+    }
+
+    public override float getPrimaryCooldown()
+    {
+        return primaryCooldown;
+    }
+
+    public override float getSecondaryCooldown()
+    {
+        return secondaryCooldown;
     }
 }
 

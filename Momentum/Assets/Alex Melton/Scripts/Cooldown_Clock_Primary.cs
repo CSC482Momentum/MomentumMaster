@@ -4,7 +4,7 @@ using System.Collections;
 using Assets;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Cooldown_Clock : MonoBehaviour {
+public class Cooldown_Clock_Primary : MonoBehaviour {
 
 	private Image image;
 	private bool isCoolingDown = false;
@@ -14,7 +14,7 @@ public class Cooldown_Clock : MonoBehaviour {
 	// Initialize myself
 	void Awake () {
 		image = gameObject.GetComponent<Image> ();
-        this.coolDownTime = weap.getCooldown();
+        this.coolDownTime = weap.getSecondaryCooldown();
        // print(coolDownTime);
 	}
 
@@ -25,10 +25,7 @@ public class Cooldown_Clock : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (weap.isActiveAndEnabled && !isCoolingDown && CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0) {
-			isCoolingDown = true;
-        }
-        if (weap.isActiveAndEnabled && !isCoolingDown && CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
+        if (weap.isActiveAndEnabled && !isCoolingDown && CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
         {
             isCoolingDown = true;
         }

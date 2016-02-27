@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.2f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -70,7 +72,8 @@
   <ItemGroup>
     <Compile Include="Assets\Alex Melton\Scripts\Charge_Slider_Ghost_Script.cs" />
     <Compile Include="Assets\Alex Melton\Scripts\Charge_Slider_Script.cs" />
-    <Compile Include="Assets\Alex Melton\Scripts\Cooldown_Clock.cs" />
+    <Compile Include="Assets\Alex Melton\Scripts\Cooldown_Clock_Primary.cs" />
+    <Compile Include="Assets\Alex Melton\Scripts\Cooldown_Clock_Secondary.cs" />
     <Compile Include="Assets\Alex Melton\Scripts\Direction_Slider_Script.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Handpainted Forest Environment Free Sample\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
@@ -149,7 +152,7 @@
     <Compile Include="Assets\Scripts\TextManager.cs" />
     <Compile Include="Assets\Scripts\WalkerController.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Weapons.cs" />
+    <Compile Include="Assets\Scripts\WeaponsManager.cs" />
     <Compile Include="Assets\Scripts\WorldController.cs" />
     <Compile Include="Assets\Scripts\bounce.cs" />
   </ItemGroup>

@@ -25,27 +25,12 @@ public class PullScript : Weapon
     // Update is called once per frame
     void Update()
     {
-        print("We're updating");
         if (timeStamp <= Time.time)
         {
             if (CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
             {
                 if (!rightTriggerUsed) {
-                    RaycastHit hit;
-                    //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-                    Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
-                    fwd = fwd.normalized;
-                    if (Physics.Raycast(transform.position, fwd, out hit, 20))
-                    {
-                        if (hit.rigidbody != null)
-                        {
-                            print("hit2!");
-                            hit.rigidbody.AddForce((-fwd) * pullforce);
-                            timeStamp = Time.time + cooldown;
-                            worldController.audioManager.playSound ("pull");
-                        }
-                    }
-                    rightTriggerUsed = true;
+                    primaryFire();
                 }
             }
             if (Input.GetAxisRaw("Xbox Right Trigger") == 0) {
@@ -55,36 +40,59 @@ public class PullScript : Weapon
             if (CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
             {
                 if (!leftTriggerUsed) {
-                    RaycastHit hit;
-                    //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-                    Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
-                    fwd = fwd.normalized;
-                    if (Physics.Raycast(transform.position, fwd, out hit, range))
-                    {
-                        if (hit.collider.tag == "Hook")
-                        {
-                            print("hit3!");
-                            if (fpsc.Grounded)
-                            {
-                                fpsc.m_Jump = true;
-                                this.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded);
-
-                            }
-                            else
-                            {
-                                fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                                this.transform.parent.transform.parent.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial);
-                            }
-                            timeStamp = Time.time + cooldown;
-                        }
-                    }
-                    leftTriggerUsed = true;
+                    secondaryFire();
                 }
             }
             if (Input.GetAxisRaw("Xbox Left Trigger") == 0) {
                 leftTriggerUsed = false;
             }
         }
+    }
+    public void primaryFire()
+    {
+        RaycastHit hit;
+        //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+        fwd = fwd.normalized;
+        if (Physics.Raycast(transform.position, fwd, out hit, getRange()))
+        {
+            if (hit.rigidbody != null)
+            {
+                print("hit2!");
+                hit.rigidbody.AddForce((-fwd) * pullforce);
+                timeStamp = Time.time + cooldown;
+                worldController.audioManager.playSound("pull");
+            }
+        }
+        rightTriggerUsed = true;
+    }
+    public void secondaryFire()
+    {
+        RaycastHit hit;
+        //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+        fwd = fwd.normalized;
+        if (Physics.Raycast(transform.position, fwd, out hit, getRange()))
+        {
+            if (hit.collider.tag == "Hook")
+            {
+                print("hit3!");
+                if (fpsc.Grounded)
+                {
+                    fpsc.m_Jump = true;
+                    transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded); // here, we're adding force to the player object
+
+                }
+                else
+                {
+                    fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial); // here, we're adding force to the player object
+                }
+                timeStamp = Time.time + cooldown;
+            }
+        }
+        leftTriggerUsed = true;
+
     }
 
     public override float getRange()

@@ -126,67 +126,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22447408, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457996, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22472292, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22497784, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22497312, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22431546, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11480502, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: axes
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 22479176, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 22454078, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
+    - target: {fileID: 11430048, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pullforce
+      value: 800
       objectReference: {fileID: 0}
-    - target: {fileID: 22468008, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22437230, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22495716, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22482570, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 457542, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11480502, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11434238, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-    - {fileID: 11417240, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &363935706
@@ -425,30 +391,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!1 &1299059946 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 104690, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-  m_PrefabInternal: {fileID: 21264311}
---- !u!114 &1299059947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1299059946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0eb8f8c1266d14f9a25ca7b674c585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushforce: 1600
-  pushplayergrounded: 2100
-  yvectaerial: {x: 0, y: 0.25, z: 0}
-  pushplayeraerial: 4000
-  charge: 0
-  range: 10
-  cooldown: 1
-  worldController: {fileID: 0}
-  fpsc: {fileID: 2097382043}
 --- !u!1001 &1328196510
 Prefab:
   m_ObjectHideFlags: 0
@@ -507,30 +449,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be06c2b664b2ac746ae7247d9528a797, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &1348591531 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 135738, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-  m_PrefabInternal: {fileID: 21264311}
---- !u!114 &1348591532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348591531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pullforce: 400
-  pullplayergrounded: 2000
-  pullplayeraerial: 5000
-  yvectgrounded: {x: 0, y: 0.2, z: 0}
-  yvectaerial: {x: 0, y: 0.8, z: 0}
-  range: 15
-  cooldown: 1
-  fpsc: {fileID: 2097382043}
-  worldController: {fileID: 0}
 --- !u!1001 &1518291424
 Prefab:
   m_ObjectHideFlags: 0
@@ -731,9 +649,3 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
   m_PrefabInternal: {fileID: 1786961232}
---- !u!114 &2097382043 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11478428, guid: c047aaad0fd178d4fb31808887ef55e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 21264311}
-  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}

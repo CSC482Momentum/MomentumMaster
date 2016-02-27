@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using Assets;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Cooldown_Clock : MonoBehaviour {
 
@@ -24,17 +25,21 @@ public class Cooldown_Clock : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1")) {
+		if (weap.isActiveAndEnabled && !isCoolingDown && CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0) {
 			isCoolingDown = true;
-		}
-		UpdateValue ();
+        }
+        if (weap.isActiveAndEnabled && !isCoolingDown && CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
+        {
+            isCoolingDown = true;
+        }
+        UpdateValue ();
 	}
 
 	void UpdateValue () {
 		if (isCoolingDown == true) {
 			image.fillAmount -= 1.0f/coolDownTime * Time.deltaTime;
 		}
-		if (image.fillAmount == 0) {
+		if (image.fillAmount == 0) { // this means that we JUST finshed cooling down.
 			isCoolingDown = false;
 			image.fillAmount = 1;
 		}

@@ -10,11 +10,12 @@ public class Respawn : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Player")
+        if (col.tag.Contains("Player"))
         {
 
-            Instantiate(prefabPe, col.transform.position, Rotation);
+            //Instantiate(prefabPe, col.transform.position, Rotation);
             col.transform.position = Spawn;
+
 //          col.transform.localEulerAngles = Rotation;
 
 			col.attachedRigidbody.velocity = Vector3.zero;

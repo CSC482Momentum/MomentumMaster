@@ -25,12 +25,13 @@ public class PushScript : Weapon
         RaycastHit hit;
         Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
         fwd = fwd.normalized;
-        if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange()))
-        {
-            if (hit.rigidbody != null)
-            {
-                print("hit!");
-                hit.rigidbody.AddForce(fwd * pushforce);
+        if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange())) {
+            if (hit.rigidbody != null) {
+                print("hit! "+ fpsc.tag);
+
+                fpsc.ApplyForceToPlayer(fwd * pushforce, hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
+
+                //hit.rigidbody.AddForce(fwd * pushforce);
 
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
                 worldController.audioManager.playSound("push");

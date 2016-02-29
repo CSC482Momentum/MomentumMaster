@@ -3,18 +3,53 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.Networking;
 
+
+/*
+    ****************************************************************************************
+
+    PLEASE DEAR GOD DO NOT CHANGE ANYTHING IN HERE!
+    It will almost certainly break networking in some obscure way
+    So please, don't change anything without consulting the Network Team first.
+
+    ****************************************************************************************
+    */
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (Rigidbody))]
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : NetworkBehaviour
     {
-        [SyncVar] PlayerState networkState;
+         /*[SyncVar] public float posX;
+         [SyncVar] public float posY;
+         [SyncVar] public float posZ;
 
-        struct PlayerState {
-            public Vector3 pos;
+         [SyncVar] public float rotX;
+         [SyncVar] public float rotY;
+         [SyncVar] public float rotZ;
+         [SyncVar] public float rotW;*/
+
+
+        /*public struct ServerState {
+            public float posX;
+            public float posY;
+            public float posZ;
+
+            public float rotX;
+            public float rotY;
+            public float rotZ;
+            public float rotW;
         }
-        
+
+        [SyncVar] public ServerState state;*/
+        /*public float posX;
+        public float posY;
+        public float posZ;
+
+        public float rotX;
+        public float rotY;
+        public float rotZ;
+        public float rotW;*/
+
         public void Awake() {
             transform.position = new Vector3(100, 100, 100);
             //GameObject player = NetworkServer.FindLocalObject(GetComponent<NetworkIdentity>().netId);
@@ -22,24 +57,80 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         public void SyncState() {
-
+            //transform.position = new Vector3(state.posX, state.posY, state.posZ);
+            //m_RigidBody.rotation = new Quaternion(state.rotX, state.rotY, state.rotZ, state.rotW);
         }
         
         [Server] public void InitState () {
-
-            networkState = new PlayerState();
-            networkState.pos = new Vector3(100, 100, 100);
+            /*posX = 100;
+            posY = 100;
+            posZ = 100;
+            rotX = 0;
+            rotY = 0;
+            rotZ = 0;*/
+            //state = new ServerState() { posX = 100, posY = 100, posZ = 100};
         }
         
         [Command] public void CmdMove() {
-            
-            networkState.pos = transform.position;
+            /*posX = m_RigidBody.transform.position.x;
+            posY = m_RigidBody.transform.position.y;
+            posZ = m_RigidBody.transform.position.z;*/
+            /*ServerState st = new ServerState();
+            st.posX = transform.position.x;
+            st.posY = transform.position.y;
+            st.posZ = transform.position.z;
+
+            st.rotX = transform.rotation.x;
+            st.rotY = transform.rotation.y;
+            st.rotZ = transform.rotation.z;
+            st.rotW = transform.rotation.w;
+            state = st;*/
         }
 
         [Command] public void CmdAddForce(Vector3 amount, ForceMode type) {
             m_RigidBody.AddForce(amount, type);
+            //print("Force added: " + amount + " local=" + isLocalPlayer);
         }
-        
+
+        [Command] public void CmdAddForce2(Vector3 amt, int pl) {
+            RigidbodyFirstPersonController play = GameObject.FindGameObjectWithTag("Player" + pl).GetComponent<RigidbodyFirstPersonController>();
+            RpcAddServerForce(amt);
+            play.m_RigidBody.AddForce(amt);
+            
+
+            print(gameObject.tag + " is hitting Player" + pl+" server="+isServer);
+        }
+
+        [ClientRpc] public void RpcAddServerForce(Vector3 amt) {
+            if (isLocalPlayer) m_RigidBody.AddForce(amt);
+            print("RPC: "+gameObject.tag + " is hitting Player_HOST local="+isLocalPlayer);
+        }
+
+        public void ApplyForceToPlayer(Vector3 amt, int pl) {                
+            CmdAddForce2(amt, pl);
+        }
+
+
+        private void RotateView() {
+            //avoids the mouse looking if the game is effectively paused
+            if (Mathf.Abs(Time.timeScale) < float.Epsilon) return;
+
+            // get the rotation before it's changed
+            float oldYRotation = transform.eulerAngles.y;
+
+            mouseLook.LookRotation(transform, cam.transform);
+
+            if (m_IsGrounded || advancedSettings.airControl) {
+                // Rotate the rigidbody velocity to match the new direction that the character is looking
+                Quaternion velRotation = Quaternion.AngleAxis(transform.eulerAngles.y - oldYRotation, Vector3.up);
+                m_RigidBody.velocity = velRotation * m_RigidBody.velocity;
+            }
+            /*rotX = transform.rotation.x;
+            rotY = transform.rotation.y;
+            rotZ = transform.rotation.z;
+            rotW = transform.rotation.w;*/
+        }
+
         [Serializable]
         public class MovementSettings
         {
@@ -114,13 +205,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public MouseLook mouseLook = new MouseLook();
         public AdvancedSettings advancedSettings = new AdvancedSettings();
 
-
-        [SyncVar] private Rigidbody m_RigidBody;
+        public Rigidbody m_RigidBody;
         private CapsuleCollider m_Capsule;
-        [SyncVar] private float m_YRotation;
-        [SyncVar] private Vector3 m_GroundContactNormal;
-        [SyncVar] private bool m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
-        [SyncVar] public bool m_Jump;
+        private float m_YRotation;
+        private Vector3 m_GroundContactNormal;
+        private bool m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
+        public bool m_Jump;
 
         public Vector3 Velocity
         {
@@ -155,6 +245,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Capsule = GetComponent<CapsuleCollider>();
             if (!isLocalPlayer) {
                 this.gameObject.transform.Find("OVRPlayerController").gameObject.SetActive(false);
+                m_RigidBody.drag = 5; //DO NOT REMOVE THIS SORCERY
             } else {
                 mouseLook.Init(transform, cam.transform);
             }
@@ -169,15 +260,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump) {
                     m_Jump = true;
                 }
-            } else {
-                SyncState();
+            //} else {
+                
             }
+            //SyncState();
         }
 
 
         private void FixedUpdate()
         {
-
             if (isLocalPlayer) {
                 GroundCheck();
                 Vector2 input = GetInput();
@@ -192,7 +283,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     desiredMove.y = desiredMove.y * movementSettings.CurrentTargetSpeed;
                     if (m_RigidBody.velocity.sqrMagnitude <
                         (movementSettings.CurrentTargetSpeed * movementSettings.CurrentTargetSpeed)) {
-                        m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
+                        //m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
                         CmdAddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
                     }
                 }
@@ -203,7 +294,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     if (m_Jump) {
                         m_RigidBody.drag = 0f;
                         m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
-                        m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+                        //m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
                         CmdAddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
                         m_Jumping = true;
                     }
@@ -219,9 +310,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
                 m_Jump = false;
                 CmdMove();
-            } else {
-                SyncState();
             }
+            SyncState();
         }
 
 
@@ -260,23 +350,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void RotateView()
-        {
-            //avoids the mouse looking if the game is effectively paused
-            if (Mathf.Abs(Time.timeScale) < float.Epsilon) return;
 
-            // get the rotation before it's changed
-            float oldYRotation = transform.eulerAngles.y;
-
-            mouseLook.LookRotation (transform, cam.transform);
-
-            if (m_IsGrounded || advancedSettings.airControl)
-            {
-                // Rotate the rigidbody velocity to match the new direction that the character is looking
-                Quaternion velRotation = Quaternion.AngleAxis(transform.eulerAngles.y - oldYRotation, Vector3.up);
-                m_RigidBody.velocity = velRotation*m_RigidBody.velocity;
-            }
-        }
 
         /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
         private void GroundCheck()

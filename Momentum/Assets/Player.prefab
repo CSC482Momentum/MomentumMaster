@@ -866,6 +866,7 @@ GameObject:
   - 136: {fileID: 13677920}
   - 137: {fileID: 13709592}
   - 114: {fileID: 11400132}
+  - 114: {fileID: 11456476}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2881,7 +2882,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 2
 --- !u!81 &8156520
 AudioListener:
@@ -3395,7 +3396,8 @@ MonoBehaviour:
   secondaryTimeStamp: 0
   rightTriggerUsed: 0
   leftTriggerUsed: 0
-  pullforce: 8000
+  worldController: {fileID: 0}
+  pullforce: 800
   pullplayergrounded: 2100
   pullplayeraerial: 5500
   yvectgrounded: {x: 0, y: 0.2, z: 0}
@@ -3405,7 +3407,6 @@ MonoBehaviour:
   primaryCooldown: 1
   secondaryCooldown: 1
   fpsc: {fileID: 11478428}
-  worldController: {fileID: 0}
 --- !u!114 &11431006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3508,6 +3509,7 @@ MonoBehaviour:
   secondaryTimeStamp: 0
   rightTriggerUsed: 0
   leftTriggerUsed: 0
+  worldController: {fileID: 0}
   pushforce: 8000
   pushplayergrounded: 2100
   yvectaerial: {x: 0, y: 0.25, z: 0}
@@ -3517,7 +3519,6 @@ MonoBehaviour:
   primaryCooldown: 1
   secondaryRange: 15
   secondaryCooldown: 1
-  worldController: {fileID: 0}
   fpsc: {fileID: 11478428}
 --- !u!114 &11433052
 MonoBehaviour:
@@ -3909,6 +3910,7 @@ MonoBehaviour:
   secondaryTimeStamp: 0
   rightTriggerUsed: 0
   leftTriggerUsed: 0
+  worldController: {fileID: 0}
   pullforce: 400
   pullplayergrounded: 2000
   pullplayeraerial: 5000
@@ -3919,7 +3921,6 @@ MonoBehaviour:
   primaryCooldown: 1
   secondaryCooldown: 1
   fpsc: {fileID: 11478428}
-  worldController: {fileID: 0}
 --- !u!114 &11453760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4027,6 +4028,26 @@ MonoBehaviour:
   rigidbodyFirstPersonController: {fileID: 11478428}
   StrideInterval: 4
   RunningStrideLengthen: 0.722
+--- !u!114 &11456476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 0
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &11457532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4309,6 +4330,7 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
+  m_RigidBody: {fileID: 0}
   m_Jump: 0
 --- !u!114 &11480502
 MonoBehaviour:
@@ -4404,6 +4426,7 @@ MonoBehaviour:
   secondaryTimeStamp: 0
   rightTriggerUsed: 0
   leftTriggerUsed: 0
+  worldController: {fileID: 0}
   pushforce: 1600
   pushplayergrounded: 2100
   yvectaerial: {x: 0, y: 0.25, z: 0}
@@ -4413,7 +4436,6 @@ MonoBehaviour:
   primaryCooldown: 1
   secondaryRange: 15
   secondaryCooldown: 1
-  worldController: {fileID: 0}
   fpsc: {fileID: 11478428}
 --- !u!136 &13611714
 CapsuleCollider:
@@ -4968,7 +4990,7 @@ RectTransform:
   m_Father: {fileID: 22448772}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5020,7 +5042,7 @@ RectTransform:
   m_Father: {fileID: 22491880}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5089,7 +5111,7 @@ RectTransform:
   m_Father: {fileID: 22413280}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5318,7 +5340,7 @@ RectTransform:
   m_Father: {fileID: 22499482}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

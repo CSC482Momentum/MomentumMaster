@@ -33,7 +33,10 @@ public class PullScript : Weapon
             {
                 print("hit2!");
                 //var distance = Vector3.Distance(hit.transform.position, transform.position);
-                hit.rigidbody.AddForce(((-fwd) * pullforce));
+                //hit.rigidbody.AddForce(((-fwd) * pullforce));
+
+                fpsc.ApplyForceToPlayer(((-fwd) * pullforce), hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
+
                 worldController.audioManager.playSound("pull");
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
             }

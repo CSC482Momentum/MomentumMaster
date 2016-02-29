@@ -144,6 +144,7 @@
     <Compile Include="Assets\Scripts\AnimationManager.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\MoveForward.cs" />
+    <Compile Include="Assets\Scripts\Multiplayer.cs" />
     <Compile Include="Assets\Scripts\PullScript.cs" />
     <Compile Include="Assets\Scripts\PushScript.cs" />
     <Compile Include="Assets\Scripts\Respawn.cs" />
@@ -154,6 +155,9 @@
     <Compile Include="Assets\Scripts\WeaponsManager.cs" />
     <Compile Include="Assets\Scripts\WorldController.cs" />
     <Compile Include="Assets\Scripts\bounce.cs" />
+    <Compile Include="Assets\plmills\Grass\Billboard.cs" />
+    <Compile Include="Assets\plmills\Grass\GrassCreator.cs" />
+    <Compile Include="Assets\plmills\mindmillRotate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CartoonBusinessZombie\ReadMe.txt" />

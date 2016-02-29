@@ -359,7 +359,7 @@ GameObject:
   - 114: {fileID: 11473580}
   - 114: {fileID: 11446036}
   m_Layer: 5
-  m_Name: InGameMenu 1
+  m_Name: InGameMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,6 +1179,7 @@ MonoBehaviour:
   - "\u041E\u041F\u0426\u0418\u0418 "
   - "\u0413\u041B\u0410\u0412\u041D\u041E\u0415 \u041C\u0415\u041D\u042E "
   - "\u0412\u042B\u0419\u0422\u0418 \u041F\u0420\u041E\u0413\u0420\u0410\u041C\u041C\u042B "
+  worldController: {fileID: 0}
 --- !u!114 &11454174
 MonoBehaviour:
   m_ObjectHideFlags: 1

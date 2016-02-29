@@ -24,8 +24,8 @@ public class TextManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		setLanguage ("English");
-		worldController = WorldController.getInstance ();
+		
+		//worldController = WorldController.getInstance ();
 	}
 
 	public void setLanguage(string targetLang) {

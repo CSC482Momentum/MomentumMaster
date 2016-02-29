@@ -131,11 +131,15 @@ Prefab:
     - target: {fileID: 11421330, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
       propertyPath: hudCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 153990, guid: 54461400f6ab190408a907d62bbccabe, type: 2}
     - target: {fileID: 11421330, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
       propertyPath: optionsMenu
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11421330, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 138760, guid: 2d451cf0e71ec5a4a85496f7aeae60c5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 88685a70ef8c1d24493a472b183c9d66, type: 2}
   m_IsPrefabParent: 0
@@ -154,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec13b190339dd264f9ec55d0e76e8607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadedScene: 0
 --- !u!114 &778132154 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11421330, guid: 88685a70ef8c1d24493a472b183c9d66,
@@ -341,6 +346,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 778132153}
+    - target: {fileID: 22400884, guid: 05f1dcfe7ee5b51449e498ced02a12f6, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 808.14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05f1dcfe7ee5b51449e498ced02a12f6, type: 2}
   m_IsPrefabParent: 0

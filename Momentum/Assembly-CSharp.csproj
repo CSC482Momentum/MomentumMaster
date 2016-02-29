@@ -121,6 +121,7 @@
      <Compile Include="Assets\Scripts\AnimationManager.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\MoveForward.cs" />
+     <Compile Include="Assets\Scripts\Multiplayer.cs" />
      <Compile Include="Assets\Scripts\PullScript.cs" />
      <Compile Include="Assets\Scripts\PushScript.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />

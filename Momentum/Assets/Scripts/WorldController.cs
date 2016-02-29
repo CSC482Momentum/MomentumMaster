@@ -8,6 +8,7 @@ public class WorldController : MonoBehaviour {
 
 	public GameObject pauseMenu;
 	public GameObject pauseOptionsMenu;
+	public GameObject hudCanvas;
 
 	//Pause handler
 	private bool showingOptions;
@@ -39,6 +40,7 @@ public class WorldController : MonoBehaviour {
 			pauseMenu = g;
 			pauseMenu.transform.GetChild (0).GetComponent<TextManager> ().worldController = this;
 			pauseMenu.transform.GetChild (0).GetComponent<TextManager> ().setLanguage (currentLang);
+			hudCanvas = GameObject.Find ("HUD_Canvas");
 		}
 	}
 
@@ -46,7 +48,11 @@ public class WorldController : MonoBehaviour {
 		currentLang = newLang;
 	}
 	void Update() {
+		if (hudCanvas == null) {
+			hudCanvas = GameObject.Find ("HUD_Canvas");
+		}
 		if (Input.GetKeyDown (KeyCode.P)) {
+			hudCanvas.SetActive (false);
 			if (!isPaused) {
 				pauseMenu.SetActive (true);
 				if (sceneChanger.loadedScene == 1) {
@@ -65,6 +71,7 @@ public class WorldController : MonoBehaviour {
 				isPaused = true;
 			} else if (isPaused /*&& !pauseOptionsMenu.activeInHierarchy*/) {
 				pauseMenu.SetActive (false);
+				hudCanvas.SetActive (true);
 				if (sceneChanger.loadedScene == 1) {
 					if (!pDown) {
 						for (int i = 0; i < pauseMenu.transform.childCount; i++) {

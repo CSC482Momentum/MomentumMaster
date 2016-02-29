@@ -155,6 +155,7 @@
     <Compile Include="Assets\Scripts\WeaponsManager.cs" />
     <Compile Include="Assets\Scripts\WorldController.cs" />
     <Compile Include="Assets\Scripts\bounce.cs" />
+    <Compile Include="Assets\modelUpdater.cs" />
     <Compile Include="Assets\plmills\Grass\Billboard.cs" />
     <Compile Include="Assets\plmills\Grass\GrassCreator.cs" />
     <Compile Include="Assets\plmills\mindmillRotate.cs" />

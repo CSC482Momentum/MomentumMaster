@@ -2487,7 +2487,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149606}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 116.682594, y: 100, z: 82.69921}
+  m_LocalPosition: {x: 85.000015, y: 109.97203, z: 95.69194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 428296}
@@ -3397,9 +3397,9 @@ MonoBehaviour:
   rightTriggerUsed: 0
   leftTriggerUsed: 0
   worldController: {fileID: 0}
-  pullforce: 800
-  pullplayergrounded: 2100
-  pullplayeraerial: 5500
+  pullforce: 8000
+  pullplayergrounded: 21000
+  pullplayeraerial: 55000
   yvectgrounded: {x: 0, y: 0.2, z: 0}
   yvectaerial: {x: 0, y: 0.8, z: 0}
   primaryRange: 30
@@ -3510,10 +3510,10 @@ MonoBehaviour:
   rightTriggerUsed: 0
   leftTriggerUsed: 0
   worldController: {fileID: 0}
-  pushforce: 8000
-  pushplayergrounded: 2100
+  pushforce: 80000
+  pushplayergrounded: 21000
   yvectaerial: {x: 0, y: 0.25, z: 0}
-  pushplayeraerial: 5500
+  pushplayeraerial: 55000
   charge: 0
   primaryRange: 15
   primaryCooldown: 1

@@ -378,7 +378,13 @@ public class OVRInput
 	/// </summary>
 	public static bool Get(Button virtualMask, Controller controllerMask = Controller.Active)
 	{
-		return OVRManager.input.GetResolvedButton(virtualMask, RawButton.None, controllerMask);
+        if (OVRManager.isHmdPresent)
+        {
+            return OVRManager.input.GetResolvedButton(virtualMask, RawButton.None, controllerMask);
+        } else
+        {
+            return false;
+        }
 	}
 
 	/// <summary>
@@ -867,7 +873,13 @@ public class OVRInput
 	/// </summary>
 	public static float Get(Axis1D virtualMask, Controller controllerMask = Controller.Active)
 	{
-		return OVRManager.input.GetResolvedAxis1D(virtualMask, RawAxis1D.None, controllerMask);
+        if (OVRManager.isHmdPresent)
+        {
+            return OVRManager.input.GetResolvedAxis1D(virtualMask, RawAxis1D.None, controllerMask);
+        } else
+        {
+            return 0;
+        }
 	}
 
 	/// <summary>
@@ -932,7 +944,13 @@ public class OVRInput
 	/// </summary>
 	public static Vector2 Get(Axis2D virtualMask, Controller controllerMask = Controller.Active)
 	{
-		return OVRManager.input.GetResolvedAxis2D(virtualMask, RawAxis2D.None, controllerMask);
+        if (OVRManager.isHmdPresent)
+        {
+            return OVRManager.input.GetResolvedAxis2D(virtualMask, RawAxis2D.None, controllerMask);
+        } else
+        {
+            return Vector2.zero;
+        }
 	}
 
 	/// <summary>
@@ -1729,7 +1747,8 @@ public class OVRInput
 		{
 			controllerType = Controller.Gamepad;
 
-			initialized = OVR_GamepadController_Initialize();
+            
+//			initialized = OVR_GamepadController_Initialize();
 		}
 
 		~OVRControllerGamepadDesktop()

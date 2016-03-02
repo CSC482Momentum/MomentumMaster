@@ -31,7 +31,7 @@ public class PushScript : Weapon
 
                 fpsc.ApplyForceToPlayer(fwd * pushforce, hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
 
-                //hit.rigidbody.AddForce(fwd * pushforce);
+//                hit.rigidbody.AddForce(fwd * pushforce);
 
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
                 worldController.audioManager.playSound("push");

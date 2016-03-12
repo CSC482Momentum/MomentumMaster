@@ -4,24 +4,23 @@ using UnityStandardAssets.Characters.FirstPerson;
 using Assets;
 using System;
 using UnityStandardAssets.CrossPlatformInput;
+using System.Text.RegularExpressions;
+using UnityEngine.Networking;
 
 public class PullScript : Weapon
 {
 
-	public float pullforce = 40000f;
-	public float pullplayergrounded = 2000f;
-	public float pullplayeraerial = 5000f;
-	public Vector3 yvectgrounded = new Vector3 (0, (float) .2, 0);
-	public Vector3 yvectaerial = new Vector3 (0, (float) .8, 0);
-	public float primaryRange= 30f;
+    public float pullforce = 40000f;
+    public float pullplayergrounded = 2000f;
+    public float pullplayeraerial = 5000f;
+    public Vector3 yvectgrounded = new Vector3(0, (float).2, 0);
+    public Vector3 yvectaerial = new Vector3(0, (float).8, 0);
+    public float primaryRange = 30f;
     public float secondaryRange = 30f;
     public float primaryCooldown = 1f;
     public float secondaryCooldown = 1f;
-    public RigidbodyFirstPersonController fpsc;
 
-
-    // Update is called once per frame
-    public override void primaryFire()
+    public override void CmdPrimaryFire()
     {
         RaycastHit hit;
         //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -35,39 +34,62 @@ public class PullScript : Weapon
                 //var distance = Vector3.Distance(hit.transform.position, transform.position);
                 //hit.rigidbody.AddForce(((-fwd) * pullforce));
 
-                fpsc.ApplyForceToPlayer(((-fwd) * pullforce), hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
-
+                //fpsc.ApplyForceToPlayer(((-fwd) * pullforce), Int32.Parse((Regex.Match(hit.rigidbody.gameObject.tag, @"\d+").Value)));
                 worldController.audioManager.playSound("pull");
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
             }
         }
         rightTriggerUsed = true;
     }
-    public override void secondaryFire()
+    public override void CmdSecondaryFire()
     {
-        RaycastHit hit;
-        //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
-        fwd = fwd.normalized;
-        if (Physics.Raycast(transform.position, fwd, out hit, getSecondaryRange()))
+        if (fpsc.isLocalPlayer)
         {
-            if (hit.collider.tag == "Hook")
+            RaycastHit hit;
+            //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+            Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+            //Vector3 fwd = transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+            fwd = fwd.normalized;
+            if (Physics.Raycast(transform.position, fwd, out hit, getSecondaryRange()))
             {
-                print("hit3!");
-                secondaryTimeStamp = Time.time + getSecondaryCooldown();
-                if (fpsc.Grounded)
+                if (hit.collider.tag == "Hook")
                 {
-                    fpsc.m_Jump = true;
-                    transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded); // here, we're adding force to the player object
-                }
-                else
-                {
-                    fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial); // here, we're adding force to the player object
+                    fpsc.movementSettings.movingWithWeapon = true;
+                    secondaryTimeStamp = Time.time + getSecondaryCooldown();
+                    if (fpsc.Grounded)
+                    {
+                        fpsc.m_RigidBody.drag = 5f;
+                        fpsc.m_Jump = true;
+                        var temp = (((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded;
+                        //float step = Time.deltaTime;
+                        //var temp = Vector3.MoveTowards(transform.position, hit.point, step);
+                        //transform.root.GetComponent<RigidbodyFirstPersonController>().CmdAddForce(temp, ForceMode.Impulse);
+                        //transform.root.GetComponent<RigidbodyFirstPersonController>().RpcAddServerForce(temp);
+                        fpsc.CmdAddForce(temp, ForceMode.Impulse);
+                        //fpsc.ApplyForceToPlayer(temp, fpsc.GetComponent<Rigidbody>().gameObject.tag.ToCharArray()[6] - '0');
+                        //fpsc.RpcAddServerForce(temp);
+                        print("hit3!" + "Pulling player with force: " + temp);
+                        //transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded); // here, we're adding force to the player object
+                    }
+                    else
+                    {
+                        fpsc.m_RigidBody.drag = 0f;
+                        //fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                        var temp = (((hit.point - transform.position).normalized) + yvectgrounded) * pullplayeraerial;
+                        //float step = Time.deltaTime;
+                        //var temp = Vector3.MoveTowards(transform.position, hit.point, step);
+                        fpsc.CmdAddForce(temp, ForceMode.Impulse);
+                        //transform.root.GetComponent<RigidbodyFirstPersonController>().CmdAddForce(temp, ForceMode.Impulse);
+                        //transform.root.GetComponent<RigidbodyFirstPersonController>().RpcAddServerForce(temp);
+                        //fpsc.RpcAddServerForce(temp);
+                        //fpsc.ApplyForceToPlayer(temp, fpsc.GetComponent<Rigidbody>().gameObject.tag.ToCharArray()[6] - '0');
+                        print("hit4!" + "Pulling player with force: " + temp);
+                        // transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial); // here, we're adding force to the player object
+                    }
                 }
             }
+            leftTriggerUsed = true;
         }
-        leftTriggerUsed = true;
 
 
     }
@@ -90,6 +112,14 @@ public class PullScript : Weapon
     public override float getSecondaryCooldown()
     {
         return secondaryCooldown;
+    }
+    public override void resetSecondaryFire()
+    {
+        fpsc.movementSettings.movingWithWeapon = false;
+    }
+
+    public override void resetPrimaryFire()
+    {
     }
 }
 

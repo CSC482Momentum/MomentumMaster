@@ -4,43 +4,45 @@ using UnityStandardAssets.Characters.FirstPerson;
 using Assets;
 using System;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.Networking;
 
 public class PushScript : Weapon
 {
-	public float pushforce = 1600f;
-	public float pushplayergrounded = 2100f;
-	public Vector3 yvectaerial = new Vector3 (0, (float) .25, 0);
-	public float pushplayeraerial = 4000f;
-	public float charge = 0f;
-	public float primaryRange = 30f;
-	public float primaryCooldown = 1f;
+    public float pushforce = 1600f;
+    public float pushplayergrounded = 2100f;
+    public Vector3 yvectaerial = new Vector3(0, (float).25, 0);
+    public float pushplayeraerial = 4000f;
+    public float charge = 0f;
+    public float primaryRange = 30f;
+    public float primaryCooldown = 1f;
     public float secondaryRange = 30f;
     public float secondaryCooldown = 1f;
-    public RigidbodyFirstPersonController fpsc;
+    //public RigidbodyFirstPersonController fpsc;
 
     // Update is called once per frame
-
-    public override void primaryFire()
+    public override void CmdPrimaryFire()
     {
         RaycastHit hit;
         Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
         fwd = fwd.normalized;
-        if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange())) {
-            if (hit.rigidbody != null) {
-                print("hit! "+ fpsc.tag);
+        if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange()))
+        {
+            if (hit.rigidbody != null)
+            {
+                //print("hit! "+ fpsc.tag);
 
-                fpsc.ApplyForceToPlayer(fwd * pushforce, hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
+                fpsc.ApplyForceToPlayer(fwd * pushforce, hit.rigidbody.gameObject.tag);
 
-//                hit.rigidbody.AddForce(fwd * pushforce);
+                //hit.rigidbody.AddForce(fwd * pushforce);
 
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
-                worldController.audioManager.playSound("push");
+                //worldController.audioManager.playSound("push");
             }
         }
         rightTriggerUsed = true;
 
     }
-    public override void secondaryFire()
+    public override void CmdSecondaryFire()
     {
         RaycastHit hit;
         Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
@@ -105,6 +107,12 @@ public class PushScript : Weapon
     public override float getSecondaryCooldown()
     {
         return secondaryCooldown;
+    }
+    public override void resetSecondaryFire()
+    {
+    }
+    public override void resetPrimaryFire()
+    {
     }
 }
 

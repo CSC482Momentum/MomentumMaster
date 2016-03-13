@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.Networking;
 
 namespace Assets
 {
-    public abstract class Weapon : MonoBehaviour
+    public abstract class Weapon : NetworkBehaviour
     {
         [HideInInspector]
         public float primaryTimeStamp;
@@ -20,9 +20,32 @@ namespace Assets
         public WorldController worldController = WorldController.getInstance();
         public RigidbodyFirstPersonController fpsc;
 
+  
         void Start()
         {
+            var Allfpsc = GameObject.FindObjectsOfType<RigidbodyFirstPersonController>();
             fpsc = gameObject.transform.root.GetComponent<RigidbodyFirstPersonController>();
+            print("fpsc from the root:\n" + fpsc.ToString());
+            
+            fpsc = fpsc.connectionToServer.playerControllers[0].unetView.GetComponent<RigidbodyFirstPersonController>();
+            print("fpsc from the server:\n" + fpsc.ToString());
+
+            var thing = fpsc.playerControllerId;
+            var thing2 = fpsc.connectionToServer.playerControllers[thing];
+            var thing3 = thing2.gameObject.GetComponent<RigidbodyFirstPersonController>();
+            print("fpsc from server player controllers? " + thing3.ToString());
+            /*var thing4 = fpsc.netId;
+            var thing5 = NetworkServer.objects[thing4];
+            var thing6 = thing5.GetComponent<RigidbodyFirstPersonController>();
+            print("fpsc from going through NetworkServer" + thing6.ToString());*/
+            //fpsc = GameObject.FindGameObjectWithTag("Player_HOST").GetComponent<RigidbodyFirstPersonController>();
+            //print("fpsc searching for Player_HOST\n" + fpsc.ToString());
+            /*var temp1 = fpsc.connectionToClient;
+            var temp2 = temp1.playerControllers;
+            var temp3 = temp2[0];
+            var temp4 = temp3.unetView;
+            var temp = temp4.GetComponent<RigidbodyFirstPersonController>();
+            print("fpsc from the client connection:\n" + temp.ToString());*/
             /*var thing = fpsc.connectionToClient;
             gameObject.transform.GetComponent<NetworkIdentity>().AssignClientAuthority(thing);
             thing = fpsc.connectionToServer;

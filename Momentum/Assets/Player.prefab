@@ -70,7 +70,6 @@ GameObject:
   - 4: {fileID: 464086}
   - 95: {fileID: 9582014}
   - 114: {fileID: 11432832}
-  - 114: {fileID: 11496764}
   m_Layer: 0
   m_Name: wep_punch2
   m_TagString: Untagged
@@ -666,7 +665,6 @@ GameObject:
   - 4: {fileID: 446902}
   - 95: {fileID: 9530076}
   - 114: {fileID: 11430048}
-  - 114: {fileID: 11449266}
   m_Layer: 0
   m_Name: wep_pull
   m_TagString: Untagged
@@ -3397,16 +3395,16 @@ MonoBehaviour:
   rightTriggerUsed: 0
   leftTriggerUsed: 0
   worldController: {fileID: 0}
+  fpsc: {fileID: 0}
   pullforce: 8000
-  pullplayergrounded: 21000
-  pullplayeraerial: 55000
+  pullplayergrounded: 800
+  pullplayeraerial: 1000
   yvectgrounded: {x: 0, y: 0.2, z: 0}
   yvectaerial: {x: 0, y: 0.8, z: 0}
   primaryRange: 30
   secondaryRange: 30
   primaryCooldown: 1
   secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!114 &11431006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3510,16 +3508,16 @@ MonoBehaviour:
   rightTriggerUsed: 0
   leftTriggerUsed: 0
   worldController: {fileID: 0}
-  pushforce: 80000
-  pushplayergrounded: 21000
+  fpsc: {fileID: 0}
+  pushforce: 8000
+  pushplayergrounded: 2100
   yvectaerial: {x: 0, y: 0.25, z: 0}
-  pushplayeraerial: 55000
+  pushplayeraerial: 5500
   charge: 0
   primaryRange: 15
   primaryCooldown: 1
   secondaryRange: 15
   secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!114 &11433052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3895,32 +3893,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11449266
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTimeStamp: 0
-  secondaryTimeStamp: 0
-  rightTriggerUsed: 0
-  leftTriggerUsed: 0
-  worldController: {fileID: 0}
-  pullforce: 400
-  pullplayergrounded: 2000
-  pullplayeraerial: 5000
-  yvectgrounded: {x: 0, y: 0.2, z: 0}
-  yvectaerial: {x: 0, y: 0.8, z: 0}
-  primaryRange: 30
-  secondaryRange: 30
-  primaryCooldown: 1
-  secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!114 &11453760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4040,7 +4012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 3
-  m_SendInterval: 0.1
+  m_SendInterval: 0.033333335
   m_SyncRotationAxis: 0
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
@@ -4312,7 +4284,10 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    maxSpeedAir: 20
+    maxSpeedGround: 15
     CurrentTargetSpeed: 8
+    movingWithWeapon: 0
   mouseLook:
     XSensitivity: 2
     YSensitivity: 2
@@ -4411,32 +4386,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &11496764
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0eb8f8c1266d14f9a25ca7b674c585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTimeStamp: 0
-  secondaryTimeStamp: 0
-  rightTriggerUsed: 0
-  leftTriggerUsed: 0
-  worldController: {fileID: 0}
-  pushforce: 1600
-  pushplayergrounded: 2100
-  yvectaerial: {x: 0, y: 0.25, z: 0}
-  pushplayeraerial: 4000
-  charge: 0
-  primaryRange: 15
-  primaryCooldown: 1
-  secondaryRange: 15
-  secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!136 &13611714
 CapsuleCollider:
   m_ObjectHideFlags: 1

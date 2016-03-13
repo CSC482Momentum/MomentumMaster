@@ -33,7 +33,9 @@ public class PullScript : Weapon
                 print("hit2!");
                 //var distance = Vector3.Distance(hit.transform.position, transform.position);
                 //hit.rigidbody.AddForce(((-fwd) * pullforce));
-
+                fpsc.ApplyForceToPlayer(-fwd * pullforce, hit.rigidbody.gameObject.tag);
+                //var otherPlayer = hit.transform.gameObject.GetComponent<RigidbodyFirstPersonController>();
+                //otherPlayer.CmdAddForce(((-fwd) * pullforce), ForceMode.Impulse);
                 //fpsc.ApplyForceToPlayer(((-fwd) * pullforce), Int32.Parse((Regex.Match(hit.rigidbody.gameObject.tag, @"\d+").Value)));
                 worldController.audioManager.playSound("pull");
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
@@ -68,7 +70,7 @@ public class PullScript : Weapon
                         fpsc.CmdAddForce(temp, ForceMode.Impulse);
                         //fpsc.ApplyForceToPlayer(temp, fpsc.GetComponent<Rigidbody>().gameObject.tag.ToCharArray()[6] - '0');
                         //fpsc.RpcAddServerForce(temp);
-                        print("hit3!" + "Pulling player with force: " + temp);
+                        //print("hit3!" + "Pulling player with force: " + temp);
                         //transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded); // here, we're adding force to the player object
                     }
                     else
@@ -83,7 +85,7 @@ public class PullScript : Weapon
                         //transform.root.GetComponent<RigidbodyFirstPersonController>().RpcAddServerForce(temp);
                         //fpsc.RpcAddServerForce(temp);
                         //fpsc.ApplyForceToPlayer(temp, fpsc.GetComponent<Rigidbody>().gameObject.tag.ToCharArray()[6] - '0');
-                        print("hit4!" + "Pulling player with force: " + temp);
+                        //print("hit4!" + "Pulling player with force: " + temp);
                         // transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial); // here, we're adding force to the player object
                     }
                 }

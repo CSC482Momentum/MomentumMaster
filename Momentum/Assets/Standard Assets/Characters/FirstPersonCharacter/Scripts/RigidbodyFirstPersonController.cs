@@ -96,8 +96,20 @@ public class RigidbodyFirstPersonController : NetworkBehaviour
     [Command]
     public void CmdAddForce(Vector3 amount, ForceMode type)
     {
-        m_RigidBody.AddForce(amount, type);
-        print("Force added: " + amount + " local=" + isLocalPlayer + " position: " + m_RigidBody.position);
+        print("Doing method CmdAddForce\n");
+        if(isServer)
+        {
+            m_RigidBody.AddForce(amount, type);
+            print(this.ToString() + "Force added: " + amount);
+        } else if (isLocalPlayer)
+        {
+            m_RigidBody.AddForce(amount, type);
+            //CmdAddForce2(amount, gameObject.tag);
+        } else
+        {
+            print("Message from Method: CmdAddForce in RigidbodyFirstPersonController.cs: Player is not on the server or on a client! Error????");
+        }
+       
     }
 
     [Command]
@@ -107,7 +119,7 @@ public class RigidbodyFirstPersonController : NetworkBehaviour
         //RpcAddServerForce(amt);
         //play.m_RigidBody.AddForce(amt);
         play.RpcAddServerForce(amt);
-        print(gameObject.tag + " is hitting Player" + player + " server=" + isServer);
+        print(this.ToString() + " is hitting Player" + play.ToString());
     }
 
     [ClientRpc]
@@ -116,7 +128,7 @@ public class RigidbodyFirstPersonController : NetworkBehaviour
         if (isLocalPlayer)
         {
             m_RigidBody.AddForce(amt, ForceMode.Impulse);
-            print("SUCCESS RPC: " + gameObject.tag + " is hitting Player_HOST local=" + isLocalPlayer + " force= " + amt);
+            print("SUCCESS RPC: " + this.ToString() + " force= " + amt);
         }
 
     }
@@ -423,6 +435,11 @@ public class RigidbodyFirstPersonController : NetworkBehaviour
         }
     }
 
+    /**
+     * This is just to prove that calling the pull weapon movement logic from within this script does actually work.
+     * and it does. This is not the full logic for the pull gun, but it's close enough to prove that it works.
+
+     */
     public void testFire()
     {
         Vector3 yvectgrounded = new Vector3(0, (float).2, 0);
@@ -477,7 +494,25 @@ public class RigidbodyFirstPersonController : NetworkBehaviour
                 }
             }
         }
-
+    }
+    private string format(string identifier, object o)
+    {
+        string s1 = identifier;
+        s1 += ": ";
+        string t = o.ToString();
+        t += "\n";
+        string s = s1 + t;
+        return s;
+    }
+    public override string ToString()
+    {
+        string s = "";
+        s += format("Player", gameObject.tag);
+        s += format("Is local?", isLocalPlayer);
+        s += format("Is on server?", isServer);
+        s += format("Has authority?", hasAuthority);
+        s += format("Player's Position", transform.position);
+        return s;
     }
 }
 

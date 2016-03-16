@@ -25,7 +25,8 @@ public class PullScript : Weapon
     {
         RaycastHit hit;
         //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+        Vector3 fwd = fpsc.cam.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+        
         fwd = fwd.normalized;
         if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange()))
         {
@@ -47,7 +48,7 @@ public class PullScript : Weapon
     {
         RaycastHit hit;
         //        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
+        Vector3 fwd = fpsc.cam.transform.TransformDirection(Vector3.forward); //here we're getting the direction of the camera.
         fwd = fwd.normalized;
         if (Physics.Raycast(transform.position, fwd, out hit, getSecondaryRange()))
         {
@@ -58,12 +59,12 @@ public class PullScript : Weapon
                 if (fpsc.Grounded)
                 {
                     fpsc.m_Jump = true;
-                    transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded); // here, we're adding force to the player object
+                    fpsc.ApplyForceToPlayer((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
                 }
                 else
                 {
                     fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    transform.root.GetComponent<Rigidbody>().AddForce((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial); // here, we're adding force to the player object
+                    fpsc.ApplyForceToPlayer((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
                 }
             }
         }

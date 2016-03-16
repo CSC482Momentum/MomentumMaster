@@ -244,8 +244,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
             if (!isLocalPlayer) {
-                this.gameObject.transform.Find("OVRPlayerController").gameObject.SetActive(false);
-                m_RigidBody.drag = 5; //DO NOT REMOVE THIS SORCERY
+                gameObject.transform.Find("OVRPlayerController").gameObject.SetActive(false);
+                m_RigidBody.drag = 5; //DO NOT REMOVE THIS BLACK DEMON MAGIC
             } else {
                 mouseLook.Init(transform, cam.transform);
             }

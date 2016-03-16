@@ -69,7 +69,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 464086}
   - 95: {fileID: 9582014}
-  - 114: {fileID: 11432832}
   - 114: {fileID: 11496764}
   m_Layer: 0
   m_Name: wep_punch2
@@ -665,7 +664,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 446902}
   - 95: {fileID: 9530076}
-  - 114: {fileID: 11430048}
   - 114: {fileID: 11449266}
   m_Layer: 0
   m_Name: wep_pull
@@ -687,7 +685,6 @@ GameObject:
   - 114: {fileID: 11422740}
   - 114: {fileID: 11480502}
   - 114: {fileID: 11455704}
-  - 114: {fileID: 11471902}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -1323,6 +1320,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &178136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480142}
+  - 114: {fileID: 11482048}
+  m_Layer: 0
+  m_Name: WeaponsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &178312
 GameObject:
   m_ObjectHideFlags: 1
@@ -1811,8 +1824,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477582}
-  - {fileID: 446902}
-  - {fileID: 464086}
   m_Father: {fileID: 478546}
   m_RootOrder: 1
 --- !u!4 &414232
@@ -2103,7 +2114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135738}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0.8, y: -0.5, z: 0.4}
+  m_LocalPosition: {x: 0.80000293, y: -0.5, z: 0.4000018}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 414834}
@@ -2115,7 +2126,7 @@ Transform:
   - {fileID: 463756}
   - {fileID: 494528}
   - {fileID: 486794}
-  m_Father: {fileID: 413898}
+  m_Father: {fileID: 480142}
   m_RootOrder: 1
 --- !u!4 &447212
 Transform:
@@ -2298,15 +2309,15 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104690}
   m_LocalRotation: {x: 0, y: 0.7071066, z: 0, w: -0.70710695}
-  m_LocalPosition: {x: 0.5, y: -0.3, z: 0.3}
+  m_LocalPosition: {x: 0.4999999, y: -0.30000305, z: 0.3000032}
   m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children:
   - {fileID: 429838}
   - {fileID: 466710}
   - {fileID: 448960}
   - {fileID: 427012}
-  m_Father: {fileID: 413898}
-  m_RootOrder: 2
+  m_Father: {fileID: 480142}
+  m_RootOrder: 0
 --- !u!4 &464196
 Transform:
   m_ObjectHideFlags: 1
@@ -2480,6 +2491,20 @@ Transform:
   - {fileID: 404622}
   m_Father: {fileID: 466710}
   m_RootOrder: 4
+--- !u!4 &480142
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 464086}
+  - {fileID: 446902}
+  m_Father: {fileID: 481178}
+  m_RootOrder: 2
 --- !u!4 &481178
 Transform:
   m_ObjectHideFlags: 1
@@ -2492,6 +2517,7 @@ Transform:
   m_Children:
   - {fileID: 428296}
   - {fileID: 22434836}
+  - {fileID: 480142}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &484706
@@ -3078,7 +3104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4c323ed7e9d214a92441ed874e220f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weap: {fileID: 11430048}
+  weap: {fileID: 0}
 --- !u!114 &11409502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3381,32 +3407,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Pushing movement (Push gun Secondary Fire)
---- !u!114 &11430048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTimeStamp: 0
-  secondaryTimeStamp: 0
-  rightTriggerUsed: 0
-  leftTriggerUsed: 0
-  worldController: {fileID: 0}
-  pullforce: 8000
-  pullplayergrounded: 21000
-  pullplayeraerial: 55000
-  yvectgrounded: {x: 0, y: 0.2, z: 0}
-  yvectaerial: {x: 0, y: 0.8, z: 0}
-  primaryRange: 30
-  secondaryRange: 30
-  primaryCooldown: 1
-  secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!114 &11431006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3494,32 +3494,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11432832
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0eb8f8c1266d14f9a25ca7b674c585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTimeStamp: 0
-  secondaryTimeStamp: 0
-  rightTriggerUsed: 0
-  leftTriggerUsed: 0
-  worldController: {fileID: 0}
-  pushforce: 80000
-  pushplayergrounded: 21000
-  yvectaerial: {x: 0, y: 0.25, z: 0}
-  pushplayeraerial: 55000
-  charge: 0
-  primaryRange: 15
-  primaryCooldown: 1
-  secondaryRange: 15
-  secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!114 &11433052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3612,7 +3586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcec960e56e31be498e9f9ce75330f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weap: {fileID: 11430048}
+  weap: {fileID: 0}
 --- !u!114 &11437444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3690,7 +3664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcec960e56e31be498e9f9ce75330f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weap: {fileID: 11432832}
+  weap: {fileID: 0}
 --- !u!114 &11440316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3913,7 +3887,7 @@ MonoBehaviour:
   worldController: {fileID: 0}
   pullforce: 400
   pullplayergrounded: 2000
-  pullplayeraerial: 5000
+  pullplayeraerial: 100000
   yvectgrounded: {x: 0, y: 0.2, z: 0}
   yvectaerial: {x: 0, y: 0.8, z: 0}
   primaryRange: 30
@@ -4045,7 +4019,7 @@ MonoBehaviour:
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
-  m_SnapThreshold: 5
+  m_SnapThreshold: 500
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
 --- !u!114 &11457532
@@ -4059,7 +4033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4c323ed7e9d214a92441ed874e220f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weap: {fileID: 11432832}
+  weap: {fileID: 0}
 --- !u!114 &11458608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4209,21 +4183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11471902
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecdfc27b1ce155f42aaf743a2efa8b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentweapon: 0
-  weapons:
-  - {fileID: 135738}
-  - {fileID: 104690}
 --- !u!114 &11472192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4376,6 +4335,21 @@ MonoBehaviour:
     y: 1
     width: 1
     height: 1
+--- !u!114 &11482048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 178136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdfc27b1ce155f42aaf743a2efa8b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentweapon: 0
+  weapons:
+  - {fileID: 135738}
+  - {fileID: 104690}
 --- !u!114 &11483166
 MonoBehaviour:
   m_ObjectHideFlags: 1

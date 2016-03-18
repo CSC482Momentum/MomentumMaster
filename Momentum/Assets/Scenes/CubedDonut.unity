@@ -433,6 +433,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 22497312, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22431546, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 481178, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 85.000015
@@ -463,20 +471,37 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 481178, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 22497312, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
+    - target: {fileID: 11430048, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pullforce
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 22431546, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
+    - target: {fileID: 11430048, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pullplayergrounded
+      value: 800
       objectReference: {fileID: 0}
-    - target: {fileID: 149606, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 11430048, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pullplayeraerial
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432832, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pushforce
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432832, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pushplayergrounded
+      value: 2100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449266, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11432832, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pushplayeraerial
+      value: 5500
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11449266, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_IsPrefabParent: 0

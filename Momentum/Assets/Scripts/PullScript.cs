@@ -17,7 +17,6 @@ public class PullScript : Weapon
     public float secondaryRange = 30f;
     public float primaryCooldown = 1f;
     public float secondaryCooldown = 1f;
-    public RigidbodyFirstPersonController fpsc;
 
 
     // Update is called once per frame

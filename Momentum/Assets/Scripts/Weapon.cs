@@ -17,41 +17,47 @@ namespace Assets
         public bool leftTriggerUsed = false;
         [HideInInspector]
         public WorldController worldController = WorldController.getInstance();
-        void Update()
+        public RigidbodyFirstPersonController fpsc;
+        void FixedUpdate()
         {
-            //        timeStamp = Time.time + cooldown;
-            if (primaryTimeStamp <= Time.time)
+            if (fpsc.isLocalPlayer)
             {
-                if (CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
+                //        timeStamp = Time.time + cooldown;
+                if (primaryTimeStamp <= Time.time)
                 {
-                    if (!rightTriggerUsed)
+                    if (CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
                     {
-                        primaryFire();
-                        //rightTriggerUsed = true;
-                        //primaryTimeStamp = Time.time + getPrimaryCooldown();
+                        if (!rightTriggerUsed)
+                        {
+                            primaryFire();
+                            //rightTriggerUsed = true;
+                            //primaryTimeStamp = Time.time + getPrimaryCooldown();
+                        }
+                    }
+                    if (Input.GetAxisRaw("Xbox Right Trigger") == 0)
+                    {
+                        rightTriggerUsed = false;
                     }
                 }
-                if (Input.GetAxisRaw("Xbox Right Trigger") == 0)
+                if (secondaryTimeStamp <= Time.time)
                 {
-                    rightTriggerUsed = false;
-                }
-            }
-            if (secondaryTimeStamp <= Time.time)
-            {
-                if (CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
-                {
-                    if (!leftTriggerUsed)
+                    if (CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
                     {
-                        secondaryFire();
-                        leftTriggerUsed = true;
-                        secondaryTimeStamp = Time.time + getSecondaryCooldown();
+                        if (!leftTriggerUsed)
+                        {
+                            secondaryFire();
+                            leftTriggerUsed = true;
+                            secondaryTimeStamp = Time.time + getSecondaryCooldown();
+                        }
+                    }
+                    if (Input.GetAxisRaw("Xbox Left Trigger") == 0)
+                    {
+                        leftTriggerUsed = false;
                     }
                 }
-                if (Input.GetAxisRaw("Xbox Left Trigger") == 0)
-                {
-                    leftTriggerUsed = false;
-                }
             }
+
+
 
         }
         public abstract float getPrimaryRange();

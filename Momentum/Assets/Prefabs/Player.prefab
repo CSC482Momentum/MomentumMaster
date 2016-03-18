@@ -3885,16 +3885,16 @@ MonoBehaviour:
   rightTriggerUsed: 0
   leftTriggerUsed: 0
   worldController: {fileID: 0}
+  fpsc: {fileID: 11478428}
   pullforce: 400
-  pullplayergrounded: 2000
-  pullplayeraerial: 100000
+  pullplayergrounded: 800
+  pullplayeraerial: 800
   yvectgrounded: {x: 0, y: 0.2, z: 0}
   yvectaerial: {x: 0, y: 0.8, z: 0}
   primaryRange: 30
   secondaryRange: 30
   primaryCooldown: 1
   secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!114 &11453760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4242,6 +4242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundedDrag: 5
+  aerialDrag: 0
+  drag: 0
   cam: {fileID: 2083654}
   movementSettings:
     ForwardSpeed: 4
@@ -4401,6 +4404,7 @@ MonoBehaviour:
   rightTriggerUsed: 0
   leftTriggerUsed: 0
   worldController: {fileID: 0}
+  fpsc: {fileID: 11478428}
   pushforce: 1600
   pushplayergrounded: 2100
   yvectaerial: {x: 0, y: 0.25, z: 0}
@@ -4410,7 +4414,6 @@ MonoBehaviour:
   primaryCooldown: 1
   secondaryRange: 15
   secondaryCooldown: 1
-  fpsc: {fileID: 11478428}
 --- !u!136 &13611714
 CapsuleCollider:
   m_ObjectHideFlags: 1

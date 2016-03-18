@@ -57,13 +57,17 @@ public class PullScript : Weapon
                 secondaryTimeStamp = Time.time + getSecondaryCooldown();
                 if (fpsc.Grounded)
                 {
+                    var temp = (((hit.point - transform.position).normalized) + yvectgrounded) *pullplayergrounded;
                     fpsc.m_Jump = true;
-                    fpsc.ApplyForceToPlayer((((hit.point - transform.position).normalized) + yvectgrounded) * pullplayergrounded, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
+                    //fpsc.ApplyForceToPlayer(temp, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
+                    fpsc.AddForceToLocal(temp, ForceMode.Impulse);
                 }
                 else
                 {
                     fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                    fpsc.ApplyForceToPlayer((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
+                    var temp = (((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial;
+                    //fpsc.ApplyForceToPlayer((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
+                    fpsc.AddForceToLocal(temp, ForceMode.Impulse);
                 }
             }
         }

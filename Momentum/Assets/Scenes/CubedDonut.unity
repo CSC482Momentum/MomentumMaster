@@ -350,9 +350,17 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11478428, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: advancedSettings.slowDownRate
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449266, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: pullplayergrounded
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 11449266, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: pullplayeraerial
-      value: 100000
+      value: 800
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}

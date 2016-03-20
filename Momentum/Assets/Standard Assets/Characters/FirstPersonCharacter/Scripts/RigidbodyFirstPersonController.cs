@@ -121,9 +121,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         [Command]
-        public void CmdAddForce2(Vector3 amt, int pl)
+        public void CmdAddForce2(Vector3 amt, string pl)
         {
-            RigidbodyFirstPersonController play = GameObject.FindGameObjectWithTag("Player" + pl).GetComponent<RigidbodyFirstPersonController>();
+            RigidbodyFirstPersonController play = GameObject.FindGameObjectWithTag(pl).GetComponent<RigidbodyFirstPersonController>();
             RpcAddServerForce(amt);
             play.m_RigidBody.AddForce(amt);
 
@@ -138,7 +138,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             print("RPC: " + gameObject.tag + " is hitting Player_HOST local=" + isLocalPlayer);
         }
 
-        public void ApplyForceToPlayer(Vector3 amt, int pl)
+        public void ApplyForceToPlayer(Vector3 amt, string pl)
         {
             CmdAddForce2(amt, pl);
         }
@@ -297,8 +297,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             m_RigidBody.drag = drag;
-            print("Current drag: attached to player" + drag);
-            print("\nCurrent RigidBody drag: " + m_RigidBody.drag);
+            //print("Current drag: attached to player" + drag);
+            //print("\nCurrent RigidBody drag: " + m_RigidBody.drag);
             if (isLocalPlayer)
             {
                 RotateView();

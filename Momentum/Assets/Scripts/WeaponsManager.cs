@@ -1,61 +1,75 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.Networking;
+using UnityStandardAssets.Characters.FirstPerson;
+namespace Assets
+{
+    public class WeaponsManager : MonoBehaviour
+    {
 
-public class WeaponsManager : MonoBehaviour {
-
-    public int currentweapon = 0;
-    public GameObject[] weapons;
-    private int nrWeapons;
-
-	// Use this for initialization
-	void Start () {
-        nrWeapons = weapons.Length;
-        SwitchWeapon(currentweapon);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-//	    for (int i=1; i <= nrWeapons; i++)
-//        {
-//            if (Input.GetKeyDown("" + i))
-//            {
-//                currentweapon = i - 1;
-//                SwitchWeapon(currentweapon);
-//            }
-            
-//        }
-        if(CrossPlatformInputManager.GetButtonDown("Weapon1"))
+        public int currentweapon = 0;
+        public GameObject[] weapons;
+        private int nrWeapons;
+        public RigidbodyFirstPersonController fpsc;
+        // Use this for initialization
+        void Start()
         {
-            currentweapon = 0;
+            nrWeapons = weapons.Length;
             SwitchWeapon(currentweapon);
-        } else if (CrossPlatformInputManager.GetButtonDown("Weapon2"))
+        }
+
+        // Update is called once per frame
+        void Update()
         {
-            currentweapon = 1;
-            SwitchWeapon(currentweapon);
-        } else if (CrossPlatformInputManager.GetButtonDown("Switch"))
-        {
-            currentweapon++;
-            if (currentweapon >= nrWeapons)
+            //	    for (int i=1; i <= nrWeapons; i++)
+            //        {
+            //            if (Input.GetKeyDown("" + i))
+            //            {
+            //                currentweapon = i - 1;
+            //                SwitchWeapon(currentweapon);
+            //            }
+
+            //        }
+            if (fpsc.isLocalPlayer)
             {
-                currentweapon = 0;
+                if (CrossPlatformInputManager.GetButtonDown("Weapon1"))
+                {
+                    currentweapon = 0;
+                    SwitchWeapon(currentweapon);
+                }
+                else if (CrossPlatformInputManager.GetButtonDown("Weapon2"))
+                {
+                    currentweapon = 1;
+                    SwitchWeapon(currentweapon);
+                }
+                else if (CrossPlatformInputManager.GetButtonDown("Switch"))
+                {
+                    currentweapon++;
+                    if (currentweapon >= nrWeapons)
+                    {
+                        currentweapon = 0;
+                    }
+                    SwitchWeapon(currentweapon);
+                }
             }
-            SwitchWeapon(currentweapon);
 
         }
-    }
 
-    void SwitchWeapon(int index)
-    {
-        for (int i=0; i < nrWeapons; i++)
+        void SwitchWeapon(int index)
         {
-            if (i == index)
+            for (int i = 0; i < nrWeapons; i++)
             {
-                weapons[i].gameObject.SetActive(true);
-            } else
-            {
-                weapons[i].gameObject.SetActive(false);
+                if (i == index)
+                {
+                    weapons[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    weapons[i].gameObject.SetActive(false);
+                }
             }
         }
     }
 }
+

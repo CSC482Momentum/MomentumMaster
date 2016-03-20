@@ -25,7 +25,7 @@ public class Cooldown_Clock_Primary : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (weap.isActiveAndEnabled && !isCoolingDown && CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
+        if (weap.isPrimaryCoolingDown())
         {
             isCoolingDown = true;
         }

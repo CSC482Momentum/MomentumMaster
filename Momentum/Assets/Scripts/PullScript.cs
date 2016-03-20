@@ -31,11 +31,12 @@ public class PullScript : Weapon
         {
             if (hit.rigidbody != null)
             {
+                primaryCoolingDown = true;
                 print("hit2!");
                 //var distance = Vector3.Distance(hit.transform.position, transform.position);
                 //hit.rigidbody.AddForce(((-fwd) * pullforce));
 
-                fpsc.ApplyForceToPlayer(((-fwd) * pullforce), hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
+                fpsc.ApplyForceToPlayer(((-fwd) * pullforce), hit.rigidbody.gameObject.tag);
 
                 worldController.audioManager.playSound("pull");
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
@@ -53,6 +54,7 @@ public class PullScript : Weapon
         {
             if (hit.collider.tag == "Hook")
             {
+                secondaryCoolingDown = true;
                 print("hit3!");
                 secondaryTimeStamp = Time.time + getSecondaryCooldown();
                 if (fpsc.Grounded)

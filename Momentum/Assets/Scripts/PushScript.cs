@@ -26,7 +26,7 @@ public class PushScript : Weapon
             if (hit.rigidbody != null) {
                 print("hit! "+ fpsc.tag);
 
-                fpsc.ApplyForceToPlayer(fwd * pushforce, hit.rigidbody.gameObject.tag.ToCharArray()[6] - '0');
+                fpsc.ApplyForceToPlayer(fwd * pushforce, hit.rigidbody.gameObject.tag);
 
 //                hit.rigidbody.AddForce(fwd * pushforce);
 
@@ -40,10 +40,12 @@ public class PushScript : Weapon
     public override void secondaryFire()
     {
         RaycastHit hit;
-        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
+        Vector3 fwd = fpsc.cam.transform.TransformDirection(Vector3.forward);
+
         if (fpsc.Grounded)
         {
-            Vector3 v = Vector3.up;
+           secondaryCoolingDown = true;
+           Vector3 v = Vector3.up;
             fpsc.m_Jump = true;
             var temp = v.normalized * pushplayergrounded;
             fpsc.AddForceToLocal(temp, ForceMode.Impulse);
@@ -52,15 +54,16 @@ public class PushScript : Weapon
         }
         else
         {
-            fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
             if (Physics.Raycast(transform.position, fwd, out hit, getSecondaryRange()))
             {
                 if (hit.collider.tag == "Hook")
                 {
                     fwd = fwd.normalized;
-                    var temp = (-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial;
+                    var temp = -((((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial);
                     fpsc.AddForceToLocal(temp, ForceMode.Impulse);
                     //transform.root.GetComponent<Rigidbody>().AddForce((-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial); // here, we're adding force to the player object.
+                    secondaryCoolingDown = true;
                     secondaryTimeStamp = Time.time + getSecondaryCooldown();
                 }
             }

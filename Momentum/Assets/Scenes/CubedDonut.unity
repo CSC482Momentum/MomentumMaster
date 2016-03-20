@@ -348,19 +348,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 149606, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11478428, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: advancedSettings.slowDownRate
-      value: 20
+    - target: {fileID: 9582014, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11449266, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: pullplayergrounded
-      value: 800
+    - target: {fileID: 9530076, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11449266, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: pullplayeraerial
-      value: 800
+    - target: {fileID: 11456476, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_SendInterval
+      value: 0.033333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 464086, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.784
+      objectReference: {fileID: 0}
+    - target: {fileID: 446902, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.784
+      objectReference: {fileID: 0}
+    - target: {fileID: 446902, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 464086, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 464086, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 446902, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
@@ -488,6 +512,18 @@ Prefab:
     - target: {fileID: 11421958, guid: 5636a75595e7f3d49b8a829cd301bc44, type: 2}
       propertyPath: Spawn5.z
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 473420, guid: 5636a75595e7f3d49b8a829cd301bc44, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 473420, guid: 5636a75595e7f3d49b8a829cd301bc44, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473420, guid: 5636a75595e7f3d49b8a829cd301bc44, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5636a75595e7f3d49b8a829cd301bc44, type: 2}

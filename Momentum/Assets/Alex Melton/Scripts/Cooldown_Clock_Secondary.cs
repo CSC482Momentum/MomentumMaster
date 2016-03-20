@@ -14,7 +14,7 @@ public class Cooldown_Clock_Secondary : MonoBehaviour {
 	// Initialize myself
 	void Awake () {
 		image = gameObject.GetComponent<Image> ();
-        this.coolDownTime = weap.getPrimaryCooldown();
+        this.coolDownTime = weap.getSecondaryCooldown();
        // print(coolDownTime);
 	}
 

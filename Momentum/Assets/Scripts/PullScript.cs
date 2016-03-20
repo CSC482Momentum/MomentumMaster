@@ -12,7 +12,7 @@ public class PullScript : Weapon
 	public float pullplayergrounded = 2000f;
 	public float pullplayeraerial = 5000f;
 	public Vector3 yvectgrounded = new Vector3 (0, (float) .2, 0);
-	public Vector3 yvectaerial = new Vector3 (0, (float) .8, 0);
+	public Vector3 yvectaerial = new Vector3 (0, (float) 1, 0);
 	public float primaryRange= 30f;
     public float secondaryRange = 30f;
     public float primaryCooldown = 1f;
@@ -64,7 +64,7 @@ public class PullScript : Weapon
                 }
                 else
                 {
-                    fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                    //fpsc.GetComponent<Rigidbody>().velocity = Vector3.zero;
                     var temp = (((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial;
                     //fpsc.ApplyForceToPlayer((((hit.point - transform.position).normalized) + yvectaerial) * pullplayeraerial, fpsc.gameObject.tag.ToCharArray()[6] - '0'); // here, we're adding force to the player object
                     fpsc.AddForceToLocal(temp, ForceMode.Impulse);

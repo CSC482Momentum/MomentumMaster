@@ -45,7 +45,10 @@ public class PushScript : Weapon
         {
             Vector3 v = Vector3.up;
             fpsc.m_Jump = true;
-            transform.root.GetComponent<Rigidbody>().AddForce((v).normalized * pushplayergrounded); // here, we're adding force to the player object.
+            var temp = v.normalized * pushplayergrounded;
+            fpsc.AddForceToLocal(temp, ForceMode.Impulse);
+            secondaryTimeStamp = Time.time + getSecondaryCooldown();
+            // transform.root.GetComponent<Rigidbody>().AddForce((v).normalized * pushplayergrounded); // here, we're adding force to the player object.
         }
         else
         {
@@ -55,7 +58,9 @@ public class PushScript : Weapon
                 if (hit.collider.tag == "Hook")
                 {
                     fwd = fwd.normalized;
-                    transform.root.GetComponent<Rigidbody>().AddForce((-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial); // here, we're adding force to the player object.
+                    var temp = (-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial;
+                    fpsc.AddForceToLocal(temp, ForceMode.Impulse);
+                    //transform.root.GetComponent<Rigidbody>().AddForce((-((hit.point - transform.position).normalized) + yvectaerial) * pushplayeraerial); // here, we're adding force to the player object.
                     secondaryTimeStamp = Time.time + getSecondaryCooldown();
                 }
             }

@@ -59,7 +59,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             transform.position = new Vector3(100, 100, 100);
             //GameObject player = NetworkServer.FindLocalObject(GetComponent<NetworkIdentity>().netId);
             InitState();
-            Physics.gravity = new Vector3(0, -20.0F, 0);
         }
 
         public void SyncState()
@@ -143,7 +142,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             CmdAddForce2(amt, pl);
         }
-
 
         private void RotateView()
         {

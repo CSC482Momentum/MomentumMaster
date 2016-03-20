@@ -85,12 +85,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &92158580 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11482048, guid: c047aaad0fd178d4fb31808887ef55e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1374132263}
-  m_Script: {fileID: 11500000, guid: ecdfc27b1ce155f42aaf743a2efa8b4c, type: 3}
 --- !u!1001 &770242055
 Prefab:
   m_ObjectHideFlags: 0
@@ -356,18 +350,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11481872, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_Color.r
-      value: 0.19999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 11481872, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11481872, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
   m_IsPrefabParent: 0
@@ -510,26 +492,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5636a75595e7f3d49b8a829cd301bc44, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1577720346 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11478428, guid: c047aaad0fd178d4fb31808887ef55e6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1374132263}
-  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
---- !u!1 &2115550369 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 156406, guid: c047aaad0fd178d4fb31808887ef55e6, type: 2}
-  m_PrefabInternal: {fileID: 1374132263}
---- !u!114 &2115550373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2115550369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f82863c53fc1c4b4b8f24400b5d4095f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsc: {fileID: 1577720346}
-  weapons: {fileID: 92158580}

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 407668}
   - 33: {fileID: 3315246}
   - 64: {fileID: 6480410}
-  - 114: {fileID: 11406372}
+  - 114: {fileID: 11468250}
   m_Layer: 0
   m_Name: DeathZone
   m_TagString: Untagged
@@ -49,7 +49,7 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &11406372
+--- !u!114 &11468250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,12 +57,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 123332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa74047dfaf490a48bae08a982f91954, type: 3}
+  m_Script: {fileID: 11500000, guid: bdc5b2cb46f533e459293d37c0731df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabPe: {fileID: 163930, guid: b505134daa7c34042861c38b35967d3d, type: 2}
-  Spawn: {x: 100, y: 100, z: 100}
-  Rotation: {x: 90, y: 90, z: 90, w: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

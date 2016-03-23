@@ -12,9 +12,13 @@ GameObject:
   - 23: {fileID: 2396888}
   - 54: {fileID: 5467724}
   - 65: {fileID: 6549808}
+  - 114: {fileID: 11455702}
+  - 114: {fileID: 11423656}
+  - 114: {fileID: 11409912}
+  - 114: {fileID: 11417640}
   m_Layer: 0
   m_Name: crate
-  m_TagString: Untagged
+  m_TagString: RigidbodyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +76,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135732}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -92,13 +96,98 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.000001, y: 2.000002, z: 2.000001}
   m_Center: {x: -0.000015258789, y: 0.0000071525574, z: 0.000015258789}
+--- !u!114 &11409912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c8ed8a1b0d66e4e841a20084c9003f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceApplied: {x: 0, y: 0, z: 0}
+  realTime: 0
+  realPacketTime: 0
+  lastPacketTime: 0
+  goalTime: 0
+--- !u!114 &11417640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf016973be05e9f4aa52fe0f1eadb138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11423656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d09e38f78e65a4b961c9b8132594d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  respawnTime: 10
+--- !u!114 &11455702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 11409912}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  isRuntimeInstantiated: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: RigidbodyObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: synchronization
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 11409912}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 135732}

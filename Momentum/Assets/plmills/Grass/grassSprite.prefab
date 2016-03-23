@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c776da37d602e4468099339e33ec7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c: {fileID: 2094512, guid: 042ba30b94f90074c976d6ba16884b3a, type: 2}
+  c: {fileID: 2038086, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
 --- !u!212 &21268232
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -81,7 +81,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: c
       value: 
-      objectReference: {fileID: 2094512, guid: 042ba30b94f90074c976d6ba16884b3a, type: 2}
+      objectReference: {fileID: 2038086, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: 0.5

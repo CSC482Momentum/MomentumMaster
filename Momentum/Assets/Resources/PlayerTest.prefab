@@ -412,6 +412,7 @@ GameObject:
   - 114: {fileID: 11468056}
   - 114: {fileID: 11416566}
   - 114: {fileID: 11457360}
+  - 114: {fileID: 11430424}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Player
@@ -1179,7 +1180,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143656}
   m_LocalRotation: {x: 0, y: -0.611703, z: 0, w: 0.7910875}
-  m_LocalPosition: {x: 193.48, y: 153.22241, z: 162.82}
+  m_LocalPosition: {x: 150.487, y: 147.299, z: 136.661}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419338}
@@ -2009,7 +2010,7 @@ MonoBehaviour:
     StrafeSpeed: 4
     RunMultiplier: 2
     RunKey: 304
-    JumpForce: 75
+    JumpForce: 10
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
@@ -2047,10 +2048,41 @@ MonoBehaviour:
     groundCheckDistance: 0.1
     stickToGroundHelperDistance: 6
     slowDownRate: 20
-    airControl: 1
+    airControl: 0
     shellOffset: 0
   m_RigidBody: {fileID: 0}
+  m_PreviouslyGrounded: 0
+  m_Jumping: 0
+  m_IsGrounded: 0
   m_Jump: 0
+--- !u!114 &11430424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTimeStamp: 0
+  secondaryTimeStamp: 0
+  rightTriggerUsed: 0
+  leftTriggerUsed: 0
+  worldController: {fileID: 0}
+  fpsc: {fileID: 11429570}
+  primaryCoolingDown: 0
+  secondaryCoolingDown: 0
+  pullforce: 40
+  pullplayergrounded: 2000
+  pullplayeraerial: 2000
+  yvectgrounded: {x: 0, y: 0.2, z: 0}
+  yvectaerial: {x: 0, y: 0.8, z: 0}
+  primaryRange: 30
+  secondaryRange: 30
+  primaryCooldown: 0.1
+  secondaryCooldown: 0.1
 --- !u!114 &11452264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2138,6 +2170,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 11468056}
+  - {fileID: 462084}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 6
   instantiationId: 6

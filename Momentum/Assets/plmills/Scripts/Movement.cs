@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     private CapsuleCollider m_Capsule;
     private float m_YRotation;
     private Vector3 m_GroundContactNormal;
-    private bool m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
+    public bool m_PreviouslyGrounded, m_Jumping, m_IsGrounded;
     public bool m_Jump;
     private void RotateView()
     {

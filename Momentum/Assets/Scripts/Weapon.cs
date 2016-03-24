@@ -17,11 +17,15 @@ namespace Assets
         public bool leftTriggerUsed = false;
         [HideInInspector]
         public WorldController worldController = WorldController.getInstance();
-        void Update()
-        {
+        public Movement fpsc;
+        public bool primaryCoolingDown = false;
+        public bool secondaryCoolingDown = false;
+        void FixedUpdate()
+        { 
             //        timeStamp = Time.time + cooldown;
             if (primaryTimeStamp <= Time.time)
             {
+                primaryCoolingDown = false;
                 if (CrossPlatformInputManager.GetButtonDown("Fire1") || Input.GetAxisRaw("Xbox Right Trigger") != 0)
                 {
                     if (!rightTriggerUsed)
@@ -38,13 +42,14 @@ namespace Assets
             }
             if (secondaryTimeStamp <= Time.time)
             {
+                secondaryCoolingDown = false;
                 if (CrossPlatformInputManager.GetButtonDown("Fire2") || Input.GetAxisRaw("Xbox Left Trigger") != 0)
                 {
                     if (!leftTriggerUsed)
                     {
                         secondaryFire();
                         leftTriggerUsed = true;
-                        secondaryTimeStamp = Time.time + getSecondaryCooldown();
+                        //secondaryTimeStamp = Time.time + getSecondaryCooldown();
                     }
                 }
                 if (Input.GetAxisRaw("Xbox Left Trigger") == 0)
@@ -53,6 +58,14 @@ namespace Assets
                 }
             }
 
+        }
+        public bool isPrimaryCoolingDown()
+        {
+            return primaryCoolingDown;
+        }
+        public bool isSecondaryCoolingDown()
+        {
+            return secondaryCoolingDown;
         }
         public abstract float getPrimaryRange();
         public abstract float getSecondaryRange();

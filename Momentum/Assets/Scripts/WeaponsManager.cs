@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
+using Assets;
 
 public class WeaponsManager : MonoBehaviour {
 
     public int currentweapon = 0;
-    public GameObject[] weapons;
+    public Weapon[] weapons;
     private int nrWeapons;
 
 	// Use this for initialization

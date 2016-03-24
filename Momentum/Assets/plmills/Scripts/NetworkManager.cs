@@ -43,9 +43,10 @@ public class NetworkManager : MonoBehaviour {
 		GameObject myPlayer = (GameObject)PhotonNetwork.Instantiate("PlayerTest", mySpawn.transform.position, mySpawn.transform.rotation, 0);
 
 		myPlayer.GetComponentInChildren<Camera>().enabled = true;
-		myPlayer.GetComponentInChildren<Pulling>().enabled = true;
+		//myPlayer.GetComponentInChildren<Pulling>().enabled = true;
 		myPlayer.GetComponentInChildren<Movement>().enabled = true;
-		//myPlayer.GetComponentInChildren<MouseLook>().enabled = true;
-	}
+        myPlayer.GetComponentInChildren<PullScript>().enabled = true;
+        //myPlayer.GetComponentInChildren<MouseLook>().enabled = true;
+    }
 
 }

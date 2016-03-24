@@ -1850,7 +1850,7 @@ Transform:
   m_LocalScale: {x: 1.0024502, y: 1, z: 1.0024505}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 373
+  m_RootOrder: 376
 --- !u!1001 &89506321
 Prefab:
   m_ObjectHideFlags: 0
@@ -4460,6 +4460,14 @@ Prefab:
       propertyPath: advancedSettings.stickToGroundHelperDistance
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11429570, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
+      propertyPath: advancedSettings.airControl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429570, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
+      propertyPath: m_RigidBody
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
   m_IsPrefabParent: 0
@@ -5288,7 +5296,7 @@ Transform:
   - {fileID: 2051144281}
   - {fileID: 399636378}
   m_Father: {fileID: 0}
-  m_RootOrder: 430
+  m_RootOrder: 433
 --- !u!1001 &255118903
 Prefab:
   m_ObjectHideFlags: 0
@@ -8777,7 +8785,7 @@ Transform:
   m_PrefabParentObject: {fileID: 483672, guid: 483b60b23e2afed47be7bb6022275a0c, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 397299687}
-  m_LocalRotation: {x: -0.68037343, y: 0.57529515, z: -0.34666082, w: 0.29317877}
+  m_LocalRotation: {x: -0.6803735, y: 0.5752952, z: -0.34666085, w: 0.2931788}
   m_LocalPosition: {x: -10.619186, y: -3.9226303, z: -11.6670685}
   m_LocalScale: {x: 0.29999998, y: 0.2999999, z: 0.29999986}
   m_Children: []
@@ -12082,7 +12090,7 @@ Transform:
   m_PrefabParentObject: {fileID: 483672, guid: 483b60b23e2afed47be7bb6022275a0c, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559432298}
-  m_LocalRotation: {x: -0.6803735, y: 0.5752952, z: -0.34666085, w: 0.2931788}
+  m_LocalRotation: {x: -0.68037343, y: 0.57529515, z: -0.34666082, w: 0.29317877}
   m_LocalPosition: {x: -10.619186, y: -3.9226303, z: -11.6670685}
   m_LocalScale: {x: 0.29999998, y: 0.2999999, z: 0.29999986}
   m_Children: []

@@ -246,7 +246,7 @@ public class Movement : MonoBehaviour
                 //m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
                 m_RigidBody.AddForce(desiredMove * SlopeMultiplier(), ForceMode.Impulse);
                 //transform.GetComponent<PhotonView>().RPC("applyForce", PhotonTargets.All, desiredMove * SlopeMultiplier());
-                print("here");
+                //print("here");
             }
         }
 

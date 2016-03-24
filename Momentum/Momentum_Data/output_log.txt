@@ -7,31 +7,44 @@ Initialize engine version: 5.3.2f1 (e87ab445ead0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GT 650M (ID=0xfd1)
+    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
     Vendor:   NVIDIA
-    VRAM:     1989 MB
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.063 seconds
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\System.dll (this message is harmless)
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.082 seconds
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 2400x1350 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
+ 
+(Filename:  Line: 1498)
+
+UnloadTime: 0.603914 ms
+[VRDevice] Initialization of device oculus failed.
+
+ 
+(Filename:  Line: 86)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2284 -> priority: 1 
+  Thread -> id: 2bec -> priority: 1 
 Initialize engine version: 5.3.2f1 (e87ab445ead0)
 [VRDevice] Initialization of device oculus failed.
 
@@ -41,39 +54,30 @@ Initialize engine version: 5.3.2f1 (e87ab445ead0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GT 650M (ID=0xfd1)
+    Renderer: NVIDIA GeForce GTX 860M (ID=0x1392)
     Vendor:   NVIDIA
-    VRAM:     1989 MB
+    VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll (this message is harmless)
-Loading C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.047 seconds
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Preston\Documents\MomentumMaster\Momentum\Momentum_Data\Managed\System.dll (this message is harmless)
-desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.082 seconds
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Alex\Documents\MomentumMaster6\Momentum\Momentum_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 2400x1350 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-UnloadTime: 0.962489 ms
-[VRDevice] Initialization of device oculus failed.
-
- 
-(Filename:  Line: 86)
-
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2c44 -> priority: 1 
-  Thread -> id: 388 -> priority: 1 
 <RI> Initialized touch support.
 OnJoinedLobby
  
@@ -87,19 +91,39 @@ OnPhotonRandomJoinFailed
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
+ 
+(Filename:  Line: 1498)
+
+UnloadTime: 0.495530 ms
 OnJoinedRoom
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-UnloadTime: 1.362745 ms
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
+ 
+(Filename:  Line: 1498)
+
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
+ 
+(Filename:  Line: 1498)
+
 [VRDevice] Initialization of device oculus failed.
 
  
 (Filename:  Line: 86)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2f44 -> priority: 1 
-  Thread -> id: 2c0c -> priority: 1 
+  Thread -> id: ef4 -> priority: 1 
+  Thread -> id: 2b30 -> priority: 1 
+(146.3, 149.8, 171.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+(0.8, 0.0, -0.6)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 OnJoinedLobby
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
@@ -108,627 +132,27 @@ OnJoinedRoom
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-(146.3, 147.2, 171.0)
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.5, 0.9, 0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(146.3, 147.2, 171.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.8, -0.2, -0.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(152.1, 144.8, 139.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, 0.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(154.6, 145.0, 139.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, 0.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(154.6, 145.0, 139.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, -0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(154.6, 145.0, 139.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, -0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(155.5, 145.0, 139.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, 0.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(156.6, 145.0, 139.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, -0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(374.1, 72.1, -34.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(374.1, 72.1, -34.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(156.6, 145.0, 139.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, -0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(374.1, 72.1, -34.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(374.1, 72.1, -34.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(156.6, 145.0, 139.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, 0.0, -0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(396.6, 78.4, -36.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(396.6, 78.4, -36.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(146.3, 147.2, 171.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.9, -0.3, -0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(171.0, 144.8, 169.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.6, -0.2, 0.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(201.8, 8.9, 257.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(201.8, 8.9, 257.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(171.0, 144.8, 169.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.4, 0.0, 0.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(171.0, 144.8, 169.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.4, -0.2, 0.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(92.2, 13.4, 211.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(92.2, 13.4, 211.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(171.0, 144.8, 169.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.4, -0.2, 0.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(109.1, 15.9, 249.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(109.1, 15.9, 249.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(146.3, 147.2, 171.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, 0.0, -0.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(159.6, 146.7, 170.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-1.0, -0.1, 0.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(167.4, 145.0, 170.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.9, -0.4, 0.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(169.4, 144.9, 171.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.8, -0.1, 0.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(280.6, 3.1, 169.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(280.6, 3.1, 169.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(169.9, 144.9, 171.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.9, -0.1, 0.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(369.6, 13.5, 161.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(369.6, 13.5, 161.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(170.4, 145.0, 172.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, -0.1, 0.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(305.1, 1.8, 14.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(305.1, 1.8, 14.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(172.6, 144.9, 171.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.9, -0.2, 0.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(191.6, 5.2, 70.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(191.6, 5.2, 70.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(171.5, 144.9, 171.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.8, -0.1, 0.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(273.9, 15.3, 188.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(273.9, 15.3, 188.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(171.5, 144.9, 171.1)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.7, -0.2, 0.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(178.9, 5.3, 184.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(178.9, 5.3, 184.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(164.6, 145.2, 158.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, -0.1, -0.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-300.7, 10.6, -482.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-300.7, 10.6, -482.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(172.2, 145.0, 172.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(1.0, -0.1, 0.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(212.7, 2.6, 28.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(212.7, 2.6, 28.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(172.2, 145.0, 172.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.8, -0.2, 0.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(142.0, 0.6, 109.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(142.0, 0.6, 109.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1498)
 
-(172.2, 145.0, 172.6)
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(0.9, -0.1, 0.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(237.1, 10.6, 112.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(237.1, 10.6, 112.5)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(153.8, 144.9, 141.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, -0.4, -0.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-91.5, -2.4, -156.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-91.5, -2.4, -156.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(153.8, 144.9, 141.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, -0.3, -0.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-105.8, -0.9, -179.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-105.8, -0.9, -179.6)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(153.8, 144.9, 141.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, -0.3, -0.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-128.7, 1.3, -216.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-128.7, 1.3, -216.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(153.3, 144.9, 140.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.4, -0.2, -0.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-142.7, 9.6, -231.7)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1498)
 
-(-142.7, 9.6, -231.7)
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(153.3, 144.9, 140.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, -0.1, -0.9)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-218.2, 15.1, -347.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Network
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-218.2, 15.1, -347.4)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(153.3, 144.9, 140.3)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-0.5, -0.1, -0.8)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1498)
 
-Network
+The class named 'MouseLook' is not derived from MonoBehaviour or ScriptableObject!
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-(-268.3, 9.1, -423.2)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+(Filename:  Line: 1498)
 
-Network
+(147.3, 147.2, 171.0)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-(-268.3, 9.1, -423.2)
+(0.7, 0.0, -0.7)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 

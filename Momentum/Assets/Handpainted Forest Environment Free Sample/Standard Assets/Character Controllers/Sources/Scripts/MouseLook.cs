@@ -1,75 +1,133 @@
+using System;
 using UnityEngine;
-using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
-/// MouseLook rotates the transform based on the mouse delta.
-/// Minimum and Maximum values can be used to constrain the possible rotation
 
-/// To make an FPS style character:
-/// - Create a capsule.
-/// - Add the MouseLook script to the capsule.
-///   -> Set the mouse look to use LookX. (You want to only turn character but not tilt it)
-/// - Add FPSInputController script to the capsule
-///   -> A CharacterMotor and a CharacterController component will be automatically added.
+[Serializable]
+public class MouseLook 
+{
+    public float XSensitivity = 2f;
+    public float YSensitivity = 2f;
+    public float XJoySen = 2f;
+    public float YJoySen = 2f;
+    public bool clampVerticalRotation = true;
+    public float MinimumX = -90F;
+    public float MaximumX = 90F;
+    public bool smooth;
+    public float smoothTime = 5f;
+    public bool lockCursor = true;
 
-/// - Create a camera. Make the camera a child of the capsule. Reset it's transform.
-/// - Add a MouseLook script to the camera.
-///   -> Set the mouse look to use LookY. (You want the camera to tilt up and down like a head. The character already turns.)
-[AddComponentMenu("Camera-Control/Mouse Look")]
-public class MouseLook : MonoBehaviour {
 
-	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
-	public RotationAxes axes = RotationAxes.MouseXAndY;
-	public float sensitivityX = 15F;
-	public float sensitivityY = 15F;
+    private Quaternion m_CharacterTargetRot;
+    private Quaternion m_CameraTargetRot;
+    private bool m_cursorIsLocked = true;
 
-	public float minimumX = -360F;
-	public float maximumX = 360F;
+    public void Init(Transform character, Transform camera)
+    {
+        m_CharacterTargetRot = character.localRotation;
+        m_CameraTargetRot = camera.localRotation;
+    }
 
-	public float minimumY = -60F;
-	public float maximumY = 60F;
 
-	float rotationY = 0F;
+    public void LookRotation(Transform character, Transform camera)
+    {
 
-	void Update ()
-	{
-		if (axes == RotationAxes.MouseXAndY)
-		{
-			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
-			
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			
-			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        //Allow for support of both Joystick and Mouse support
+        float yRot = CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
+        float xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
+        float yJoyRot = CrossPlatformInputManager.GetAxis("Joystick X") * XJoySen;
+        float xJoyRot = CrossPlatformInputManager.GetAxis("Joystick Y") * YJoySen;
 
-			//transform.parent.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-		}
-		else if (axes == RotationAxes.MouseX)
-		{
-			transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
-		}
-		else
-		{
-			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			
-			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
-		}
-	}
+        m_CharacterTargetRot *= Quaternion.Euler(0f, yRot, 0f);
+        m_CameraTargetRot *= Quaternion.Euler(-xRot, 0f, 0f);
+        m_CharacterTargetRot *= Quaternion.Euler(0f, yJoyRot, 0f);
+        m_CameraTargetRot *= Quaternion.Euler(xJoyRot, 0f, 0f);
 
-	void OnMouseDown() {
-		Cursor.visible = false;
+        if (clampVerticalRotation)
+            m_CameraTargetRot = ClampRotationAroundXAxis(m_CameraTargetRot);
 
-		Cursor.lockState = CursorLockMode.Locked;
-	}
+        if (smooth)
+        {
+            character.localRotation = Quaternion.Slerp(character.localRotation, m_CharacterTargetRot,
+                smoothTime * Time.deltaTime);
+            camera.localRotation = Quaternion.Slerp(camera.localRotation, m_CameraTargetRot,
+                smoothTime * Time.deltaTime);
+        }
+        else
+        {
+            character.localRotation = m_CharacterTargetRot;
+            camera.localRotation = m_CameraTargetRot;
+        }
 
-	void Start ()
-	{
-		Cursor.visible = false;
+        UpdateCursorLock();
 
-		Cursor.lockState = CursorLockMode.Locked;
 
-		 //Make the rigid body not change rotation
-		if (GetComponent<Rigidbody>())
-			GetComponent<Rigidbody>().freezeRotation = true;
-	}
+    }
+
+    public void SetCursorLock(bool value)
+    {
+
+        lockCursor = value;
+        if (!lockCursor)
+        {//we force unlock the cursor if the user disable the cursor locking helper
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+
+
+    }
+
+    public void UpdateCursorLock()
+    {
+
+        //if the user set "lockCursor" we check & properly lock the cursos
+        if (lockCursor)
+            InternalLockUpdate();
+
+
+    }
+
+    private void InternalLockUpdate()
+    {
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            m_cursorIsLocked = false;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            m_cursorIsLocked = true;
+        }
+
+        if (m_cursorIsLocked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else if (!m_cursorIsLocked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+    }
+
+    Quaternion ClampRotationAroundXAxis(Quaternion q)
+    {
+        q.x /= q.w;
+        q.y /= q.w;
+        q.z /= q.w;
+        q.w = 1.0f;
+
+        float angleX = 2.0f * Mathf.Rad2Deg * Mathf.Atan(q.x);
+
+        angleX = Mathf.Clamp(angleX, MinimumX, MaximumX);
+
+        q.x = Mathf.Tan(0.5f * Mathf.Deg2Rad * angleX);
+
+        return q;
+    }
+
 }
+

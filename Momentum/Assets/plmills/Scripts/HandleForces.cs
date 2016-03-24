@@ -9,6 +9,7 @@ public class HandleForces : MonoBehaviour {
 		print(force);
 
 		this.transform.GetComponent<Rigidbody>().AddForce(force);
+        print("Force:" + force);
 	}
 
 

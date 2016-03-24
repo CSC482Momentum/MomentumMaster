@@ -57,17 +57,28 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>Assets\Plugins\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets\Plugins\WebSocket\websocket-sharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatChannel.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatClient.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatDisconnectCause.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatEventCode.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatOperationCode.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatParameterCode.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatPeer.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatState.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\ChatUserStatus.cs" />
+    <Compile Include="Assets\Plugins\PhotonChatApi\IChatClientListener.cs" />
+    <Compile Include="Assets\Plugins\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Prefabs\Clickable.cs" />
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
@@ -205,6 +216,13 @@
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
     <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
+    <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />
+    <None Include="Assets\Photon Unity Networking\Demos\DemoPickup\Assets\3dFont\3dText.shader" />
+    <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
+    <None Include="Assets\Photon Unity Networking\changelog.txt" />
+    <None Include="Assets\Photon Unity Networking\readme.txt" />
+    <None Include="Assets\Plugins\Photon3Unity3D.xml" />
+    <None Include="Assets\Plugins\release_history.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

@@ -45,7 +45,7 @@ public class NetworkManager : MonoBehaviour {
 		myPlayer.GetComponentInChildren<Camera>().enabled = true;
 		myPlayer.GetComponentInChildren<Pulling>().enabled = true;
 		myPlayer.GetComponentInChildren<Movement>().enabled = true;
-		myPlayer.GetComponentInChildren<MouseLook>().enabled = true;
+		//myPlayer.GetComponentInChildren<MouseLook>().enabled = true;
 	}
 
 }

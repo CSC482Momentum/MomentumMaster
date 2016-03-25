@@ -1025,7 +1025,6 @@ GameObject:
   - 114: {fileID: 11429570}
   - 114: {fileID: 11478676}
   - 114: {fileID: 11468056}
-  - 114: {fileID: 11416566}
   - 114: {fileID: 11457360}
   - 114: {fileID: 11433136}
   - 114: {fileID: 11430424}
@@ -4630,18 +4629,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11416566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f27e1c9e77b8774a97ded45b9c88268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pvCache: {fileID: 0}
 --- !u!114 &11416634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5545,7 +5532,7 @@ MonoBehaviour:
     StrafeSpeed: 4
     RunMultiplier: 2
     RunKey: 304
-    JumpForce: 10
+    JumpForce: 20
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:
@@ -5677,8 +5664,8 @@ MonoBehaviour:
   yvectaerial: {x: 0, y: 0.8, z: 0}
   primaryRange: 30
   secondaryRange: 30
-  primaryCooldown: 0.1
-  secondaryCooldown: 0.1
+  primaryCooldown: 1
+  secondaryCooldown: 1
 --- !u!114 &11433136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8486,8 +8473,8 @@ MonoBehaviour:
   - {fileID: 479596}
   - {fileID: 428214}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 6
+  instantiationId: 6
   isRuntimeInstantiated: 0
 --- !u!114 &11479178
 MonoBehaviour:

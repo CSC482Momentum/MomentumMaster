@@ -46,6 +46,7 @@ public class NetworkManager : MonoBehaviour {
 		//myPlayer.GetComponentInChildren<Pulling>().enabled = true;
 		myPlayer.GetComponentInChildren<Movement>().enabled = true;
         myPlayer.GetComponentInChildren<PullScript>().enabled = true;
+        myPlayer.GetComponentInChildren<WeaponsManager>().enabled = true;
         //myPlayer.GetComponentInChildren<MouseLook>().enabled = true;
     }
 

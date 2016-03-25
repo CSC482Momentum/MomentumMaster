@@ -52,10 +52,15 @@ public class WeaponsManager : MonoBehaviour {
         {
             if (i == index)
             {
-                weapons[i].gameObject.SetActive(true);
+                //weapons[i].gameObject.SetActive(true);
+                weapons[i].model.SetActive(true);
+                weapons[i].enabled = true;
             } else
             {
-                weapons[i].gameObject.SetActive(false);
+                //weapons[i].gameObject.SetActive(false);
+                weapons[i].model.SetActive(false);
+                weapons[i].enabled = false;
+
             }
         }
     }

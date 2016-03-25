@@ -18,6 +18,7 @@ namespace Assets
         [HideInInspector]
         public WorldController worldController = WorldController.getInstance();
         public Movement fpsc;
+        public GameObject model;
         public bool primaryCoolingDown = false;
         public bool secondaryCoolingDown = false;
         void FixedUpdate()

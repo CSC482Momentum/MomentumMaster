@@ -413,6 +413,8 @@ GameObject:
   - 114: {fileID: 11416566}
   - 114: {fileID: 11457360}
   - 114: {fileID: 11430424}
+  - 114: {fileID: 11465590}
+  - 114: {fileID: 11449026}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Player
@@ -522,7 +524,6 @@ GameObject:
   - 4: {fileID: 419338}
   - 20: {fileID: 2038086}
   - 81: {fileID: 8177182}
-  - 114: {fileID: 11465234}
   m_Layer: 0
   m_Name: CharacterCamera
   m_TagString: MainCamera
@@ -1180,7 +1181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143656}
   m_LocalRotation: {x: 0, y: -0.611703, z: 0, w: 0.7910875}
-  m_LocalPosition: {x: 150.487, y: 147.299, z: 136.661}
+  m_LocalPosition: {x: 193.48, y: 153.22241, z: 162.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419338}
@@ -1324,7 +1325,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.043, z: -0.03}
+  m_LocalPosition: {x: -0, y: -1.043, z: 0.342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 498978}
@@ -1968,7 +1969,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174168}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: efef206b67eda6b4294c84942a1911fe, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 9ca869679ac74b94396296fc72ab41ec, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2061,7 +2062,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143656}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2830b4938e8d7d4449fe4a42ae6ea426, type: 3}
   m_Name: 
@@ -2072,6 +2073,7 @@ MonoBehaviour:
   leftTriggerUsed: 0
   worldController: {fileID: 0}
   fpsc: {fileID: 11429570}
+  model: {fileID: 174168}
   primaryCoolingDown: 0
   secondaryCoolingDown: 0
   pullforce: 40
@@ -2083,6 +2085,21 @@ MonoBehaviour:
   secondaryRange: 30
   primaryCooldown: 0.1
   secondaryCooldown: 0.1
+--- !u!114 &11449026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143656}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdfc27b1ce155f42aaf743a2efa8b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentweapon: 0
+  weapons:
+  - {fileID: 11430424}
+  - {fileID: 11465590}
 --- !u!114 &11452264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2109,30 +2126,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf016973be05e9f4aa52fe0f1eadb138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11465234
+--- !u!114 &11465590
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 152058}
+  m_GameObject: {fileID: 143656}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d0eb8f8c1266d14f9a25ca7b674c585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSensitivity: 2
-  YSensitivity: 2
-  XJoySen: 2
-  YJoySen: 2
-  clampVerticalRotation: 1
-  MinimumX: -90
-  MaximumX: 90
-  smooth: 0
-  smoothTime: 5
-  lockCursor: 1
-  m_CharacterTargetRot: {x: 0, y: 0, z: 0, w: 0}
-  m_CameraTargetRot: {x: 0, y: 0, z: 0, w: 0}
-  m_cursorIsLocked: 1
+  primaryTimeStamp: 0
+  secondaryTimeStamp: 0
+  rightTriggerUsed: 0
+  leftTriggerUsed: 0
+  worldController: {fileID: 0}
+  fpsc: {fileID: 11429570}
+  model: {fileID: 142728}
+  primaryCoolingDown: 0
+  secondaryCoolingDown: 0
+  pushforce: 1600
+  pushplayergrounded: 2100
+  yvectaerial: {x: 0, y: 0.25, z: 0}
+  pushplayeraerial: 4000
+  charge: 0
+  primaryRange: 30
+  primaryCooldown: 1
+  secondaryRange: 30
+  secondaryCooldown: 1
 --- !u!114 &11468056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2171,6 +2193,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 11468056}
   - {fileID: 462084}
+  - {fileID: 428214}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 6
   instantiationId: 6

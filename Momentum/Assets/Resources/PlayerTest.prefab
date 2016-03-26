@@ -8473,8 +8473,8 @@ MonoBehaviour:
   - {fileID: 479596}
   - {fileID: 428214}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 6
-  instantiationId: 6
+  viewIdField: 0
+  instantiationId: -1
   isRuntimeInstantiated: 0
 --- !u!114 &11479178
 MonoBehaviour:

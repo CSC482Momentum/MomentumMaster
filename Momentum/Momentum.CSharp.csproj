@@ -232,6 +232,8 @@
     <Compile Include="Assets\plmills\Scripts\Respawning.cs" />
     <Compile Include="Assets\plmills\Scripts\Spawning.cs" />
     <Compile Include="Assets\plmills\mindmillRotate.cs" />
+    <Compile Include="Assets\powerup.cs" />
+    <Compile Include="Assets\powerupList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CartoonBusinessZombie\ReadMe.txt" />

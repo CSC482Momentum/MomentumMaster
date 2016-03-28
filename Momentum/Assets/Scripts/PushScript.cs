@@ -20,7 +20,7 @@ public class PushScript : Weapon
     public override void primaryFire()
     {
         RaycastHit hit;
-        Vector3 fwd = transform.parent.transform.TransformDirection(Vector3.forward);
+        Vector3 fwd = fpsc.cam.transform.TransformDirection(Vector3.forward);
         fwd = fwd.normalized;
         if (Physics.Raycast(transform.position, fwd, out hit, getPrimaryRange()))
         {
@@ -33,7 +33,7 @@ public class PushScript : Weapon
                 //                hit.rigidbody.AddForce(fwd * pushforce);
 
                 primaryTimeStamp = Time.time + getPrimaryCooldown();
-                worldController.audioManager.playSound("push");
+                //worldController.audioManager.playSound("push");
             }
         }
         rightTriggerUsed = true;

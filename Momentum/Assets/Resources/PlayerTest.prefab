@@ -1030,6 +1030,7 @@ GameObject:
   - 114: {fileID: 11430424}
   - 114: {fileID: 11449026}
   - 114: {fileID: 11422548}
+  - 114: {fileID: 11460254}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Player
@@ -7749,6 +7750,17 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &11460254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c644d0f80b31b444bb154599bcf0d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11460614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8485,8 +8497,8 @@ MonoBehaviour:
   - {fileID: 479596}
   - {fileID: 428214}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 6
+  instantiationId: 6
   isRuntimeInstantiated: 0
 --- !u!114 &11479178
 MonoBehaviour:

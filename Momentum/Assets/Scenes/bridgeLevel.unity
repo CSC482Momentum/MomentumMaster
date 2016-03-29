@@ -6933,21 +6933,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84b01b14f68b03b46b5acae6354d7c9f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &335558970 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 143656, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
-  m_PrefabInternal: {fileID: 1845480417}
---- !u!114 &335558971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 335558970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c644d0f80b31b444bb154599bcf0d15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &341350044
 Prefab:
   m_ObjectHideFlags: 0
@@ -39078,7 +39063,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446458, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
       propertyPath: m_RootOrder
-      value: 254
+      value: 263
       objectReference: {fileID: 0}
     - target: {fileID: 11478676, guid: 6a968860b36452b45816f99a6cbbfc03, type: 2}
       propertyPath: viewIdField
